@@ -148,10 +148,12 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
 
 
         if env.index == 0:
-            if global_update != 0 and global_update % 20 == 0:
-                torch.save(policy.state_dict(), policy_path + '/Stage1_{}'.format(global_update))
+            #if global_update != 0 and global_update % 20 == 0:
+            if id != 0 and id % 1000 == 0:
+    
+                torch.save(policy.state_dict(), policy_path + '/epi_{}'.format(id))
                 logger.info('########################## model saved when update {} times#########'
-                            '################'.format(global_update))
+                            '################'.format(id))
         distance = np.sqrt((env.goal_point[0] - env.init_pose[0])**2 + (env.goal_point[1]-env.init_pose[1])**2)
 
         logger.info('Env %02d, Goal (%05.1f, %05.1f), Episode %05d, setp %03d, Reward %-5.1f, Distance %05.1f, %s' % \

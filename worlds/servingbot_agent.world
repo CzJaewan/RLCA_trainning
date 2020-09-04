@@ -259,12 +259,12 @@ agent( pose [8.00 0.00 0.00 180.00]  name "robot_0" color "red")
 
 human1( pose [-8.00 0.00 0.00 0.00]  name "human_0")
 human2( pose [7.73 2.07 0.00 195.00] name "human_1")
-
 human4( pose [5.66 5.66 0.00 225.00] name "human_2")
-human1( pose [4.00 6.93 0.00 240.00] name "human_3")
-human2( pose [2.07 7.73 0.00 255.00] name "human_4")
+human5( pose [4.00 -6.93 0.00 135.00] name "human_3")
 
-human4( pose [-2.07 7.73 0.00 285.00] name "human_5")
-human5( pose [4.00 -6.93 0.00 135.00] name "human_6")
+
+human1( pose [4.00 6.93 0.00 240.00] name "human_4")
+human2( pose [2.07 7.73 0.00 255.00] name "human_5")
+human4( pose [-2.07 7.73 0.00 285.00] name "human_6")
 human5( pose [-0.00 -8.00 0.00 90.00] name "human_7")
 

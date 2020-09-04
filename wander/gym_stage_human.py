@@ -13,7 +13,6 @@ from rosgraph_msgs.msg import Clock
 from std_srvs.srv import Empty
 from std_msgs.msg import Int8
 
-
 class StageWorld():
     def __init__(self, beam_num, index, num_env):
         print(index)
@@ -51,15 +50,11 @@ class StageWorld():
         self.stop_counter = 0
 
         # -----------Publisher and Subscriber-------------
-        cmd_vel_topic = 'human_' + str(index) + '/cmd_vel'
+        cmd_vel_topic = 'huma1_' + str(index) + '/cmd_vel'
         self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10000)
 
         cmd_pose_topic = 'human_' + str(index) + '/cmd_pose'
         self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=10000)
-        
-        goal_point_topic = 'human_' + str(index) + '/pub_goal_point'
-        self.pub_goal_point = rospy.Publisher(goal_point_topic, Pose, queue_size=10000)
-
 
         # ---------Subscriber-----------------
 
