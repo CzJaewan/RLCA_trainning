@@ -335,3 +335,324 @@
 2020-09-04 22:54:37,637 - INFO - Env 00, Goal (-00.3, -02.0), Episode 00198, setp 152, Reward -9.8 , Distance 004.9, Time out
 2020-09-04 22:54:39,861 - INFO - Env 00, Goal (-03.0, 006.7), Episode 00199, setp 152, Reward -40.8, Distance 004.5, Time out
 2020-09-04 22:54:42,411 - INFO - Env 00, Goal (000.9, -04.7), Episode 00200, setp 152, Reward -16.7, Distance 004.6, Time out
+2020-09-05 00:21:02,847 - INFO - #####################################
+2020-09-05 00:21:02,847 - INFO - ############Start Training###########
+2020-09-05 00:21:02,848 - INFO - #####################################
+2020-09-05 00:21:04,144 - INFO - Env 00, Goal (-03.3, 008.1), Episode 00001, setp 083, Reward -32.2, Distance 006.0, Crashed
+2020-09-05 00:21:06,424 - INFO - Env 00, Goal (000.2, 006.3), Episode 00002, setp 152, Reward -35.8, Distance 005.8, Time out
+2020-09-05 00:21:08,336 - INFO - Env 00, Goal (000.9, -02.7), Episode 00003, setp 152, Reward -14.1, Distance 004.6, Time out
+2020-09-05 00:21:10,034 - INFO - Env 00, Goal (001.1, 004.9), Episode 00004, setp 126, Reward -38.1, Distance 005.3, Crashed
+2020-09-05 00:21:10,611 - INFO - Env 00, Goal (-03.5, 003.0), Episode 00005, setp 011, Reward -15.9, Distance 005.7, Crashed
+2020-09-05 00:21:11,524 - INFO - Env 00, Goal (005.5, 000.4), Episode 00006, setp 035, Reward -23.7, Distance 004.4, Crashed
+2020-09-05 00:21:12,025 - INFO - Env 00, Goal (-02.3, 001.2), Episode 00007, setp 002, Reward -15.1, Distance 004.4, Crashed
+2020-09-05 00:21:13,602 - INFO - Env 00, Goal (-02.4, 006.4), Episode 00008, setp 113, Reward -24.9, Distance 005.9, Crashed
+2020-09-05 00:21:15,923 - INFO - Env 00, Goal (002.0, -07.1), Episode 00009, setp 152, Reward -32.9, Distance 004.4, Time out
+2020-09-05 00:21:17,590 - INFO - Env 00, Goal (003.1, 005.5), Episode 00010, setp 117, Reward -20.0, Distance 004.4, Crashed
+2020-09-05 00:21:19,890 - INFO - Env 00, Goal (000.4, 005.0), Episode 00011, setp 152, Reward -25.5, Distance 005.2, Time out
+2020-09-05 00:21:21,851 - INFO - Env 00, Goal (-01.8, 007.8), Episode 00012, setp 152, Reward -29.1, Distance 004.9, Time out
+2020-09-05 00:21:24,028 - INFO - Env 00, Goal (000.9, -06.8), Episode 00013, setp 152, Reward -29.7, Distance 004.4, Time out
+2020-09-05 00:21:24,514 - INFO - Env 00, Goal (-02.1, -02.3), Episode 00014, setp 017, Reward -19.2, Distance 005.8, Crashed
+2020-09-05 00:21:24,988 - INFO - Env 00, Goal (004.6, -01.6), Episode 00015, setp 002, Reward -15.1, Distance 005.9, Crashed
+2020-09-05 00:21:25,281 - INFO - Env 00, Goal (000.1, 005.9), Episode 00016, setp 007, Reward -16.5, Distance 006.0, Crashed
+2020-09-05 00:21:26,848 - INFO - Env 00, Goal (000.7, -00.1), Episode 00017, setp 100, Reward -35.8, Distance 004.3, Crashed
+2020-09-05 00:21:28,124 - INFO - Env 00, Goal (004.6, -06.4), Episode 00018, setp 071, Reward -31.1, Distance 005.3, Crashed
+2020-09-05 00:21:28,603 - INFO - Env 00, Goal (-07.4, -01.7), Episode 00019, setp 002, Reward -15.1, Distance 005.4, Crashed
+2020-09-05 00:21:30,722 - INFO - Env 00, Goal (000.0, -08.3), Episode 00020, setp 152, Reward -31.1, Distance 005.1, Time out
+2020-09-05 00:21:31,014 - INFO - Env 00, Goal (000.2, 006.1), Episode 00021, setp 004, Reward -15.6, Distance 004.8, Crashed
+2020-09-05 00:21:31,449 - INFO - Env 00, Goal (-01.1, 001.0), Episode 00022, setp 002, Reward -15.1, Distance 004.4, Crashed
+2020-09-05 00:21:32,385 - INFO - Env 00, Goal (001.9, 004.5), Episode 00023, setp 059, Reward -30.0, Distance 005.1, Crashed
+2020-09-05 00:21:33,956 - INFO - Env 00, Goal (-00.6, -07.3), Episode 00024, setp 053, Reward -33.2, Distance 005.9, Crashed
+2020-09-05 00:21:34,436 - INFO - Env 00, Goal (-06.1, 000.8), Episode 00025, setp 002, Reward -15.1, Distance 004.1, Crashed
+2020-09-05 00:21:35,520 - INFO - Env 00, Goal (-02.5, 004.6), Episode 00026, setp 042, Reward -20.2, Distance 004.6, Crashed
+2020-09-05 00:21:36,030 - INFO - Env 00, Goal (-00.5, 004.5), Episode 00027, setp 002, Reward -15.1, Distance 004.8, Crashed
+2020-09-05 00:21:36,717 - INFO - Env 00, Goal (-02.2, 007.0), Episode 00028, setp 025, Reward -16.0, Distance 004.6, Crashed
+2020-09-05 00:21:37,161 - INFO - Env 00, Goal (-02.5, -06.5), Episode 00029, setp 002, Reward -15.1, Distance 004.4, Crashed
+2020-09-05 00:21:37,810 - INFO - Env 00, Goal (-05.1, 006.5), Episode 00030, setp 016, Reward -19.0, Distance 005.2, Crashed
+2020-09-05 00:21:39,943 - INFO - Env 00, Goal (007.6, -04.5), Episode 00031, setp 152, Reward -33.2, Distance 005.5, Time out
+2020-09-05 00:21:41,050 - INFO - Env 00, Goal (003.7, -07.6), Episode 00032, setp 078, Reward -22.2, Distance 004.8, Crashed
+2020-09-05 00:21:41,547 - INFO - Env 00, Goal (002.6, 002.6), Episode 00033, setp 002, Reward -15.2, Distance 004.5, Crashed
+2020-09-05 00:21:42,356 - INFO - Env 00, Goal (001.0, 002.3), Episode 00034, setp 055, Reward -26.2, Distance 005.3, Crashed
+2020-09-05 00:21:44,302 - INFO - Env 00, Goal (005.8, -01.0), Episode 00035, setp 152, Reward -27.8, Distance 005.1, Time out
+2020-09-05 00:21:45,691 - INFO - Env 00, Goal (-02.5, 005.1), Episode 00036, setp 098, Reward -16.9, Distance 004.8, Crashed
+2020-09-05 00:21:46,297 - INFO - Env 00, Goal (006.7, -05.4), Episode 00037, setp 034, Reward -22.5, Distance 004.3, Crashed
+2020-09-05 00:21:48,483 - INFO - Env 00, Goal (002.1, 004.7), Episode 00038, setp 152, Reward -10.6, Distance 005.6, Time out
+2020-09-05 00:21:49,087 - INFO - Env 00, Goal (-06.5, 001.2), Episode 00039, setp 027, Reward -20.8, Distance 004.8, Crashed
+2020-09-05 00:21:49,343 - INFO - Env 00, Goal (-07.1, 001.7), Episode 00040, setp 002, Reward -15.1, Distance 005.6, Crashed
+2020-09-05 00:21:49,928 - INFO - Env 00, Goal (001.3, 003.4), Episode 00041, setp 028, Reward -21.1, Distance 004.5, Crashed
+2020-09-05 00:21:52,280 - INFO - Env 00, Goal (-06.9, -03.7), Episode 00042, setp 152, Reward -14.5, Distance 006.0, Time out
+2020-09-05 00:21:52,926 - INFO - Env 00, Goal (-02.2, -04.8), Episode 00043, setp 037, Reward -23.1, Distance 005.0, Crashed
+2020-09-05 00:21:53,359 - INFO - Env 00, Goal (000.2, 001.4), Episode 00044, setp 023, Reward -20.0, Distance 004.7, Crashed
+2020-09-05 00:21:53,904 - INFO - Env 00, Goal (-06.9, -04.9), Episode 00045, setp 004, Reward -15.6, Distance 005.3, Crashed
+2020-09-05 00:21:55,343 - INFO - Env 00, Goal (001.9, -00.7), Episode 00046, setp 084, Reward -31.2, Distance 004.5, Crashed
+2020-09-05 00:21:56,746 - INFO - Env 00, Goal (-00.7, -00.4), Episode 00047, setp 078, Reward -30.7, Distance 005.7, Crashed
+2020-09-05 00:21:57,770 - INFO - Env 00, Goal (000.3, 005.3), Episode 00048, setp 006, Reward -12.0, Distance 005.9, Crashed
+2020-09-05 00:21:58,722 - INFO - Env 00, Goal (-00.1, 000.8), Episode 00049, setp 057, Reward -30.3, Distance 005.8, Crashed
+2020-09-05 00:21:59,019 - INFO - Env 00, Goal (004.5, -02.6), Episode 00050, setp 006, Reward -14.4, Distance 005.1, Crashed
+2020-09-05 00:22:00,503 - INFO - Env 00, Goal (005.1, -04.3), Episode 00051, setp 092, Reward -38.8, Distance 005.7, Crashed
+2020-09-05 00:22:02,805 - INFO - Env 00, Goal (003.9, 000.1), Episode 00052, setp 149, Reward -48.3, Distance 005.5, Crashed
+2020-09-05 00:22:04,002 - INFO - Env 00, Goal (-05.5, 000.8), Episode 00053, setp 068, Reward -27.1, Distance 005.2, Crashed
+2020-09-05 00:22:06,020 - INFO - Env 00, Goal (-00.6, 005.8), Episode 00054, setp 152, Reward -25.0, Distance 004.3, Time out
+2020-09-05 00:22:06,264 - INFO - Env 00, Goal (-03.6, 002.6), Episode 00055, setp 002, Reward -15.1, Distance 004.2, Crashed
+2020-09-05 00:22:08,090 - INFO - Env 00, Goal (006.9, -04.9), Episode 00056, setp 127, Reward -35.2, Distance 005.6, Crashed
+2020-09-05 00:22:08,999 - INFO - Env 00, Goal (-02.2, 007.9), Episode 00057, setp 040, Reward -22.7, Distance 005.5, Crashed
+2020-09-05 00:22:10,926 - INFO - Env 00, Goal (-00.1, -02.3), Episode 00058, setp 138, Reward -37.8, Distance 005.0, Crashed
+2020-09-05 00:22:12,556 - INFO - Env 00, Goal (-00.0, 000.8), Episode 00059, setp 115, Reward -39.0, Distance 004.0, Crashed
+2020-09-05 00:22:13,189 - INFO - Env 00, Goal (003.9, -03.1), Episode 00060, setp 010, Reward -15.8, Distance 005.3, Crashed
+2020-09-05 00:22:14,352 - INFO - Env 00, Goal (000.6, -01.6), Episode 00061, setp 055, Reward -29.7, Distance 004.8, Crashed
+2020-09-05 00:22:16,390 - INFO - Env 00, Goal (-00.9, -01.3), Episode 00062, setp 152, Reward -9.5 , Distance 005.2, Time out
+2020-09-05 00:22:16,954 - INFO - Env 00, Goal (000.3, 003.0), Episode 00063, setp 027, Reward -21.0, Distance 005.6, Crashed
+2020-09-05 00:22:18,305 - INFO - Env 00, Goal (006.6, 001.4), Episode 00064, setp 088, Reward -39.2, Distance 005.9, Crashed
+2020-09-05 00:22:19,125 - INFO - Env 00, Goal (-00.7, 004.0), Episode 00065, setp 031, Reward -22.4, Distance 004.1, Crashed
+2020-09-05 00:22:20,212 - INFO - Env 00, Goal (-00.2, 007.8), Episode 00066, setp 068, Reward -18.1, Distance 004.2, Crashed
+2020-09-05 00:22:21,773 - INFO - Env 00, Goal (007.1, -00.2), Episode 00067, setp 110, Reward -21.7, Distance 004.4, Crashed
+2020-09-05 00:22:22,222 - INFO - Env 00, Goal (000.8, 001.5), Episode 00068, setp 002, Reward -15.1, Distance 005.5, Crashed
+2020-09-05 00:22:24,551 - INFO - Env 00, Goal (-03.6, 004.8), Episode 00069, setp 152, Reward -25.9, Distance 004.9, Time out
+2020-09-05 00:22:25,431 - INFO - Env 00, Goal (-03.4, -01.3), Episode 00070, setp 057, Reward -23.7, Distance 005.0, Crashed
+2020-09-05 00:22:27,109 - INFO - Env 00, Goal (001.1, -04.4), Episode 00071, setp 101, Reward -37.3, Distance 004.5, Crashed
+2020-09-05 00:22:28,310 - INFO - Env 00, Goal (002.0, 003.7), Episode 00072, setp 086, Reward -36.1, Distance 005.8, Crashed
+2020-09-05 00:22:29,408 - INFO - Env 00, Goal (001.3, 007.6), Episode 00073, setp 054, Reward -28.7, Distance 005.7, Crashed
+2020-09-05 00:22:31,550 - INFO - Env 00, Goal (-01.1, 007.3), Episode 00074, setp 152, Reward -26.6, Distance 004.8, Time out
+2020-09-05 00:22:32,841 - INFO - Env 00, Goal (-00.1, -02.7), Episode 00075, setp 078, Reward -37.3, Distance 004.6, Crashed
+2020-09-05 00:22:33,309 - INFO - Env 00, Goal (-02.4, 001.4), Episode 00076, setp 002, Reward -15.1, Distance 004.8, Crashed
+2020-09-05 00:22:34,471 - INFO - Env 00, Goal (005.9, -05.9), Episode 00077, setp 078, Reward -34.6, Distance 005.9, Crashed
+2020-09-05 00:22:34,963 - INFO - Env 00, Goal (000.1, -05.4), Episode 00078, setp 002, Reward -15.1, Distance 004.3, Crashed
+2020-09-05 00:22:35,611 - INFO - Env 00, Goal (-03.8, 004.7), Episode 00079, setp 021, Reward -19.9, Distance 004.2, Crashed
+2020-09-05 00:22:37,632 - INFO - Env 00, Goal (005.3, -01.6), Episode 00080, setp 152, Reward -26.4, Distance 005.8, Time out
+2020-09-05 00:22:39,151 - INFO - Env 00, Goal (005.1, -00.5), Episode 00081, setp 101, Reward -29.6, Distance 004.8, Crashed
+2020-09-05 00:22:39,571 - INFO - Env 00, Goal (004.5, -01.0), Episode 00082, setp 002, Reward -15.1, Distance 005.3, Crashed
+2020-09-05 00:22:39,800 - INFO - Env 00, Goal (-02.0, -05.5), Episode 00083, setp 003, Reward -15.5, Distance 004.1, Crashed
+2020-09-05 00:22:41,706 - INFO - Env 00, Goal (002.6, -04.4), Episode 00084, setp 133, Reward -46.5, Distance 005.5, Crashed
+2020-09-05 00:22:43,104 - INFO - Env 00, Goal (002.1, 002.4), Episode 00085, setp 074, Reward -27.2, Distance 005.5, Crashed
+2020-09-05 00:23:22,070 - INFO - #####################################
+2020-09-05 00:23:22,070 - INFO - ############Start Training###########
+2020-09-05 00:23:22,070 - INFO - #####################################
+2020-09-05 00:23:23,339 - INFO - Env 00, Goal (-04.9, -06.1), Episode 00001, setp 076, Reward -34.5, Distance 005.4, Crashed
+2020-09-05 00:23:23,944 - INFO - Env 00, Goal (-02.1, -01.1), Episode 00002, setp 032, Reward -16.9, Distance 004.8, Crashed
+2020-09-05 00:23:25,693 - INFO - Env 00, Goal (-04.9, 005.6), Episode 00003, setp 126, Reward -45.3, Distance 004.0, Crashed
+2020-09-05 00:23:26,163 - INFO - Env 00, Goal (001.2, -00.4), Episode 00004, setp 002, Reward -15.1, Distance 005.6, Crashed
+2020-09-05 00:23:27,865 - INFO - Env 00, Goal (-01.1, 004.3), Episode 00005, setp 117, Reward -44.5, Distance 005.4, Crashed
+2020-09-05 00:23:29,022 - INFO - Env 00, Goal (-08.3, 000.3), Episode 00006, setp 054, Reward -29.4, Distance 004.7, Crashed
+2020-09-05 00:23:29,654 - INFO - Env 00, Goal (007.8, 001.8), Episode 00007, setp 017, Reward -19.3, Distance 004.3, Crashed
+2020-09-05 00:23:30,533 - INFO - Env 00, Goal (003.3, 002.2), Episode 00008, setp 035, Reward -22.8, Distance 004.1, Crashed
+2020-09-05 00:23:32,731 - INFO - Env 00, Goal (-01.7, 003.5), Episode 00009, setp 147, Reward -51.1, Distance 004.9, Crashed
+2020-09-05 00:23:33,266 - INFO - Env 00, Goal (004.6, -07.7), Episode 00010, setp 002, Reward -15.2, Distance 005.5, Crashed
+2020-09-05 00:23:33,834 - INFO - Env 00, Goal (000.9, -04.4), Episode 00011, setp 010, Reward -17.2, Distance 005.4, Crashed
+2020-09-05 00:23:35,201 - INFO - Env 00, Goal (006.3, 001.3), Episode 00012, setp 078, Reward -26.6, Distance 004.8, Crashed
+2020-09-05 00:23:36,616 - INFO - Env 00, Goal (-05.8, 002.7), Episode 00013, setp 078, Reward -21.1, Distance 004.7, Crashed
+2020-09-05 00:23:37,721 - INFO - Env 00, Goal (004.8, 002.5), Episode 00014, setp 053, Reward -21.8, Distance 004.6, Crashed
+2020-09-05 00:23:37,952 - INFO - Env 00, Goal (-03.5, -02.6), Episode 00015, setp 004, Reward -15.6, Distance 005.5, Crashed
+2020-09-05 00:23:39,412 - INFO - Env 00, Goal (-08.3, -00.8), Episode 00016, setp 111, Reward -35.6, Distance 005.2, Crashed
+2020-09-05 00:23:39,863 - INFO - Env 00, Goal (002.6, 001.6), Episode 00017, setp 002, Reward -15.1, Distance 004.9, Crashed
+2020-09-05 00:23:41,948 - INFO - Env 00, Goal (-01.2, -00.8), Episode 00018, setp 152, Reward -12.8, Distance 004.9, Time out
+2020-09-05 00:23:42,489 - INFO - Env 00, Goal (005.9, -00.4), Episode 00019, setp 028, Reward -17.5, Distance 004.1, Crashed
+2020-09-05 00:23:44,282 - INFO - Env 00, Goal (-02.1, 002.5), Episode 00020, setp 119, Reward -47.1, Distance 005.7, Crashed
+2020-09-05 00:23:45,105 - INFO - Env 00, Goal (004.8, 005.1), Episode 00021, setp 046, Reward -27.9, Distance 005.1, Crashed
+2020-09-05 00:26:16,350 - INFO - #####################################
+2020-09-05 00:26:16,350 - INFO - ############Start Training###########
+2020-09-05 00:26:16,350 - INFO - #####################################
+2020-09-05 00:26:17,882 - INFO - Env 00, Goal (-04.3, -04.5), Episode 00001, setp 106, Reward -23.5, Distance 004.8, Crashed
+2020-09-05 00:26:19,832 - INFO - Env 00, Goal (000.4, 003.1), Episode 00002, setp 152, Reward -19.2, Distance 004.2, Time out
+2020-09-05 00:26:21,583 - INFO - Env 00, Goal (-00.7, -06.7), Episode 00003, setp 143, Reward -27.7, Distance 005.5, Crashed
+2020-09-05 00:26:23,654 - INFO - Env 00, Goal (-00.7, -03.2), Episode 00004, setp 152, Reward -17.0, Distance 005.1, Time out
+2020-09-05 00:26:25,513 - INFO - Env 00, Goal (-02.3, 007.2), Episode 00005, setp 152, Reward -23.5, Distance 004.3, Time out
+2020-09-05 00:29:02,923 - INFO - #####################################
+2020-09-05 00:29:02,924 - INFO - ############Start Training###########
+2020-09-05 00:29:02,924 - INFO - #####################################
+2020-09-05 00:29:04,142 - INFO - Env 00, Goal (-06.1, 002.0), Episode 00001, setp 085, Reward -22.0, Distance 004.9, Crashed
+2020-09-05 00:29:04,612 - INFO - Env 00, Goal (001.5, 008.8), Episode 00002, setp 002, Reward -15.1, Distance 004.6, Crashed
+2020-09-05 00:29:05,441 - INFO - Env 00, Goal (-02.9, 002.9), Episode 00003, setp 059, Reward -26.4, Distance 004.6, Crashed
+2020-09-05 00:29:07,199 - INFO - Env 00, Goal (005.7, -00.4), Episode 00004, setp 152, Reward -29.6, Distance 005.3, Time out
+2020-09-05 00:29:08,324 - INFO - Env 00, Goal (-02.5, -03.9), Episode 00005, setp 067, Reward -25.3, Distance 004.1, Crashed
+2020-09-05 00:29:09,633 - INFO - Env 00, Goal (-06.6, -03.7), Episode 00006, setp 075, Reward -29.5, Distance 005.0, Crashed
+2020-09-05 00:29:10,104 - INFO - Env 00, Goal (-00.1, -01.6), Episode 00007, setp 002, Reward -15.1, Distance 005.6, Crashed
+2020-09-05 00:29:11,403 - INFO - Env 00, Goal (-04.4, -03.5), Episode 00008, setp 093, Reward -21.4, Distance 005.7, Crashed
+2020-09-05 00:29:12,377 - INFO - Env 00, Goal (-02.3, -00.7), Episode 00009, setp 046, Reward -28.0, Distance 005.2, Crashed
+2020-09-05 00:29:12,820 - INFO - Env 00, Goal (003.9, 000.1), Episode 00010, setp 002, Reward -15.1, Distance 005.3, Crashed
+2020-09-05 00:29:13,086 - INFO - Env 00, Goal (004.8, 002.5), Episode 00011, setp 002, Reward -15.2, Distance 004.2, Crashed
+2020-09-05 00:29:15,686 - INFO - Env 00, Goal (-01.5, 004.3), Episode 00012, setp 105, Reward -43.2, Distance 005.7, Crashed
+2020-09-05 00:29:16,957 - INFO - Env 00, Goal (-03.5, -05.4), Episode 00013, setp 047, Reward -29.7, Distance 004.7, Crashed
+2020-09-05 00:29:19,302 - INFO - Env 00, Goal (-02.5, -04.2), Episode 00014, setp 130, Reward -48.2, Distance 004.6, Crashed
+2020-09-05 00:29:20,239 - INFO - Env 00, Goal (-03.0, 007.9), Episode 00015, setp 035, Reward -15.8, Distance 004.9, Crashed
+2020-09-05 00:29:20,715 - INFO - Env 00, Goal (003.8, 005.8), Episode 00016, setp 002, Reward -15.1, Distance 004.4, Crashed
+2020-09-05 00:29:21,214 - INFO - Env 00, Goal (002.2, -03.7), Episode 00017, setp 026, Reward -19.9, Distance 005.0, Crashed
+2020-09-05 00:29:23,284 - INFO - Env 00, Goal (002.7, 006.9), Episode 00018, setp 152, Reward -33.0, Distance 005.3, Time out
+2020-09-05 00:29:23,555 - INFO - Env 00, Goal (-04.0, 006.9), Episode 00019, setp 003, Reward -15.3, Distance 005.2, Crashed
+2020-09-05 00:29:25,063 - INFO - Env 00, Goal (-00.8, -02.1), Episode 00020, setp 092, Reward -32.1, Distance 004.4, Crashed
+2020-09-05 00:29:26,366 - INFO - Env 00, Goal (002.7, -08.5), Episode 00021, setp 079, Reward -33.8, Distance 005.3, Crashed
+2020-09-05 00:29:27,764 - INFO - Env 00, Goal (-00.5, 004.7), Episode 00022, setp 113, Reward -16.9, Distance 004.8, Crashed
+2020-09-05 00:29:29,125 - INFO - Env 00, Goal (-00.4, -04.4), Episode 00023, setp 077, Reward -23.6, Distance 005.0, Crashed
+2020-09-05 00:29:29,868 - INFO - Env 00, Goal (-06.8, 004.3), Episode 00024, setp 028, Reward -22.1, Distance 005.5, Crashed
+2020-09-05 00:29:32,035 - INFO - Env 00, Goal (-02.3, 005.3), Episode 00025, setp 152, Reward -33.1, Distance 004.4, Time out
+2020-09-05 00:29:33,822 - INFO - Env 00, Goal (-06.9, 002.6), Episode 00026, setp 146, Reward -25.9, Distance 005.5, Crashed
+2020-09-05 00:29:35,603 - INFO - Env 00, Goal (005.4, 002.8), Episode 00027, setp 152, Reward -26.4, Distance 005.8, Time out
+2020-09-05 00:29:36,454 - INFO - Env 00, Goal (001.8, -03.2), Episode 00028, setp 045, Reward -24.9, Distance 005.6, Crashed
+2020-09-05 00:29:38,567 - INFO - Env 00, Goal (002.2, 006.6), Episode 00029, setp 152, Reward -29.3, Distance 004.8, Time out
+2020-09-05 00:29:40,448 - INFO - Env 00, Goal (-02.1, 006.9), Episode 00030, setp 152, Reward -35.6, Distance 005.9, Time out
+2020-09-05 00:29:41,265 - INFO - Env 00, Goal (000.8, 003.0), Episode 00031, setp 028, Reward -20.1, Distance 006.0, Crashed
+2020-09-05 00:29:42,088 - INFO - Env 00, Goal (003.5, 005.5), Episode 00032, setp 017, Reward -16.7, Distance 005.1, Crashed
+2020-09-05 00:29:42,561 - INFO - Env 00, Goal (001.3, 006.8), Episode 00033, setp 002, Reward -15.1, Distance 005.8, Crashed
+2020-09-05 00:29:45,112 - INFO - Env 00, Goal (-00.9, -04.0), Episode 00034, setp 115, Reward -46.1, Distance 004.8, Crashed
+2020-09-05 00:29:45,566 - INFO - Env 00, Goal (-06.7, 005.6), Episode 00035, setp 002, Reward -15.1, Distance 005.6, Crashed
+2020-09-05 00:29:47,735 - INFO - Env 00, Goal (-04.5, -06.3), Episode 00036, setp 136, Reward -44.6, Distance 005.6, Crashed
+2020-09-05 00:29:50,066 - INFO - Env 00, Goal (000.3, 004.8), Episode 00037, setp 152, Reward -22.4, Distance 004.3, Time out
+2020-09-05 00:29:51,718 - INFO - Env 00, Goal (004.2, 007.0), Episode 00038, setp 124, Reward -43.3, Distance 004.4, Crashed
+2020-09-05 00:29:52,556 - INFO - Env 00, Goal (000.1, 004.2), Episode 00039, setp 033, Reward -24.2, Distance 004.1, Crashed
+2020-09-05 00:29:54,533 - INFO - Env 00, Goal (-06.0, 000.4), Episode 00040, setp 152, Reward -32.1, Distance 004.5, Time out
+2020-09-05 00:29:56,955 - INFO - Env 00, Goal (-04.5, -03.1), Episode 00041, setp 142, Reward -28.5, Distance 005.1, Crashed
+2020-09-05 00:29:59,164 - INFO - Env 00, Goal (-02.3, -00.0), Episode 00042, setp 152, Reward -9.6 , Distance 005.4, Time out
+2020-09-05 00:30:00,335 - INFO - Env 00, Goal (-03.7, 000.2), Episode 00043, setp 078, Reward -29.1, Distance 004.8, Crashed
+2020-09-05 00:30:00,788 - INFO - Env 00, Goal (003.6, 001.9), Episode 00044, setp 002, Reward -15.1, Distance 004.0, Crashed
+2020-09-05 00:30:02,520 - INFO - Env 00, Goal (000.0, -08.0), Episode 00045, setp 083, Reward -34.9, Distance 005.6, Crashed
+2020-09-05 00:30:04,728 - INFO - Env 00, Goal (003.2, -03.4), Episode 00046, setp 096, Reward -46.3, Distance 005.2, Crashed
+2020-09-05 00:30:06,723 - INFO - Env 00, Goal (-00.3, -02.8), Episode 00047, setp 117, Reward -27.9, Distance 004.7, Crashed
+2020-09-05 00:30:07,189 - INFO - Env 00, Goal (000.8, -06.4), Episode 00048, setp 002, Reward -15.1, Distance 005.1, Crashed
+2020-09-05 00:30:09,336 - INFO - Env 00, Goal (-00.2, -05.8), Episode 00049, setp 152, Reward -32.0, Distance 005.0, Time out
+2020-09-05 00:30:10,642 - INFO - Env 00, Goal (006.2, -05.9), Episode 00050, setp 097, Reward -16.2, Distance 005.0, Crashed
+2020-09-05 00:30:12,855 - INFO - Env 00, Goal (-01.5, 005.7), Episode 00051, setp 152, Reward -11.4, Distance 005.7, Time out
+2020-09-05 00:30:14,354 - INFO - Env 00, Goal (-05.3, 005.0), Episode 00052, setp 114, Reward -14.9, Distance 006.0, Crashed
+2020-09-05 00:30:14,812 - INFO - Env 00, Goal (-02.7, 005.9), Episode 00053, setp 002, Reward -15.1, Distance 005.7, Crashed
+2020-09-05 00:30:16,683 - INFO - Env 00, Goal (001.0, -02.2), Episode 00054, setp 152, Reward -8.5 , Distance 005.3, Time out
+2020-09-05 00:30:16,958 - INFO - Env 00, Goal (003.2, 000.5), Episode 00055, setp 002, Reward -15.2, Distance 005.3, Crashed
+2020-09-05 00:30:19,252 - INFO - Env 00, Goal (004.5, -03.8), Episode 00056, setp 152, Reward -35.3, Distance 004.5, Time out
+2020-09-05 00:30:21,818 - INFO - Env 00, Goal (000.4, 004.7), Episode 00057, setp 152, Reward -17.7, Distance 005.5, Time out
+2020-09-05 00:30:23,097 - INFO - Env 00, Goal (-04.8, -04.8), Episode 00058, setp 052, Reward -29.7, Distance 005.1, Crashed
+2020-09-05 00:30:25,195 - INFO - Env 00, Goal (002.7, -03.6), Episode 00059, setp 096, Reward -41.6, Distance 004.0, Crashed
+2020-09-05 00:30:26,085 - INFO - Env 00, Goal (-02.3, 001.0), Episode 00060, setp 035, Reward -20.8, Distance 005.2, Crashed
+2020-09-05 00:30:27,117 - INFO - Env 00, Goal (007.2, 000.6), Episode 00061, setp 046, Reward -27.0, Distance 005.6, Crashed
+2020-09-05 00:30:27,676 - INFO - Env 00, Goal (-04.8, 000.3), Episode 00062, setp 008, Reward -14.5, Distance 005.4, Crashed
+2020-09-05 00:30:28,155 - INFO - Env 00, Goal (000.9, -03.4), Episode 00063, setp 002, Reward -15.1, Distance 005.9, Crashed
+2020-09-05 00:30:28,654 - INFO - Env 00, Goal (004.4, -00.9), Episode 00064, setp 024, Reward -20.2, Distance 004.1, Crashed
+2020-09-05 00:30:30,115 - INFO - Env 00, Goal (005.5, -01.0), Episode 00065, setp 116, Reward -44.2, Distance 005.3, Crashed
+2020-09-05 00:30:30,793 - INFO - Env 00, Goal (002.5, 003.1), Episode 00066, setp 024, Reward -21.5, Distance 004.8, Crashed
+2020-09-05 00:30:32,873 - INFO - Env 00, Goal (003.4, -02.3), Episode 00067, setp 146, Reward -21.9, Distance 005.9, Crashed
+2020-09-05 00:30:34,954 - INFO - Env 00, Goal (004.6, 003.1), Episode 00068, setp 152, Reward -34.8, Distance 004.6, Time out
+2020-09-05 00:30:36,997 - INFO - Env 00, Goal (-01.5, -01.1), Episode 00069, setp 152, Reward -24.4, Distance 005.9, Time out
+2020-09-05 00:31:14,614 - INFO - #####################################
+2020-09-05 00:31:14,614 - INFO - ############Start Training###########
+2020-09-05 00:31:14,614 - INFO - #####################################
+2020-09-05 00:31:17,414 - INFO - Env 00, Goal (-02.1, 003.9), Episode 00001, setp 152, Reward -15.3, Distance 004.4, Time out
+2020-09-05 00:31:19,621 - INFO - Env 00, Goal (007.0, -02.0), Episode 00002, setp 116, Reward -33.2, Distance 004.5, Crashed
+2020-09-05 00:31:21,967 - INFO - Env 00, Goal (002.4, 003.4), Episode 00003, setp 030, Reward -22.5, Distance 004.7, Crashed
+2020-09-05 00:31:25,660 - INFO - Env 00, Goal (004.5, 005.0), Episode 00004, setp 152, Reward -29.8, Distance 005.3, Time out
+2020-09-05 00:31:28,232 - INFO - Env 00, Goal (-03.5, -06.6), Episode 00005, setp 152, Reward -4.1 , Distance 005.6, Time out
+2020-09-05 00:31:29,434 - INFO - Env 00, Goal (001.0, 000.0), Episode 00006, setp 017, Reward -16.8, Distance 006.0, Crashed
+2020-09-05 00:31:31,483 - INFO - Env 00, Goal (000.6, 002.2), Episode 00007, setp 002, Reward -15.1, Distance 004.1, Crashed
+2020-09-05 00:31:33,561 - INFO - Env 00, Goal (007.2, -01.4), Episode 00008, setp 091, Reward -37.0, Distance 005.5, Crashed
+2020-09-05 00:31:37,271 - INFO - Env 00, Goal (-04.5, 007.1), Episode 00009, setp 152, Reward -33.0, Distance 005.9, Time out
+2020-09-05 00:31:39,861 - INFO - Env 00, Goal (-02.6, 002.2), Episode 00010, setp 152, Reward -6.7 , Distance 005.5, Time out
+2020-09-05 00:31:42,454 - INFO - Env 00, Goal (-07.7, -02.7), Episode 00011, setp 152, Reward -19.7, Distance 005.3, Time out
+2020-09-05 00:31:44,432 - INFO - Env 00, Goal (-04.7, 000.2), Episode 00012, setp 090, Reward -17.8, Distance 005.6, Crashed
+2020-09-05 00:31:46,981 - INFO - Env 00, Goal (-03.2, -06.3), Episode 00013, setp 152, Reward -29.6, Distance 005.8, Time out
+2020-09-05 00:31:48,934 - INFO - Env 00, Goal (002.0, 004.9), Episode 00014, setp 091, Reward -13.2, Distance 005.9, Crashed
+2020-09-05 00:40:22,835 - INFO - #####################################
+2020-09-05 00:40:22,836 - INFO - ############Start Training###########
+2020-09-05 00:40:22,836 - INFO - #####################################
+2020-09-05 00:40:24,904 - INFO - Env 00, Goal (-02.7, 003.6), Episode 00001, setp 083, Reward -28.7, Distance 005.1, Crashed
+2020-09-05 00:40:27,105 - INFO - Env 00, Goal (-03.1, -04.2), Episode 00002, setp 011, Reward -17.3, Distance 004.2, Crashed
+2020-09-05 00:40:30,778 - INFO - Env 00, Goal (-01.8, -00.5), Episode 00003, setp 147, Reward -13.6, Distance 005.2, 0
+2020-09-05 00:40:50,956 - INFO - #####################################
+2020-09-05 00:40:50,956 - INFO - ############Start Training###########
+2020-09-05 00:40:50,956 - INFO - #####################################
+2020-09-05 00:40:53,197 - INFO - Env 00, Goal (003.0, 002.3), Episode 00001, setp 083, Reward -37.8, Distance 005.8, Crashed
+2020-09-05 00:40:55,452 - INFO - Env 00, Goal (000.2, 003.9), Episode 00002, setp 093, Reward -29.5, Distance 004.3, Crashed
+2020-09-05 00:40:58,422 - INFO - Env 00, Goal (006.3, 005.8), Episode 00003, setp 082, Reward -15.9, Distance 005.2, Crashed
+2020-09-05 00:41:01,020 - INFO - Env 00, Goal (000.7, -02.1), Episode 00004, setp 044, Reward -27.2, Distance 004.7, Crashed
+2020-09-05 00:41:04,833 - INFO - Env 00, Goal (-01.2, -04.3), Episode 00005, setp 152, Reward -11.0, Distance 004.8, Time out
+2020-09-05 00:45:21,182 - INFO - #####################################
+2020-09-05 00:45:21,182 - INFO - ############Start Training###########
+2020-09-05 00:45:21,182 - INFO - #####################################
+2020-09-05 00:45:23,205 - INFO - Env 00, Goal (-02.7, 001.1), Episode 00001, setp 076, Reward -29.0, Distance 004.2, Crashed
+2020-09-05 00:45:25,502 - INFO - Env 00, Goal (004.8, -02.2), Episode 00002, setp 024, Reward -20.4, Distance 004.5, Crashed
+2020-09-05 00:45:28,500 - INFO - Env 00, Goal (-04.0, -02.1), Episode 00003, setp 087, Reward -22.0, Distance 005.6, Crashed
+2020-09-05 00:45:31,602 - INFO - Env 00, Goal (000.0, 000.5), Episode 00004, setp 104, Reward -39.2, Distance 004.2, Crashed
+2020-09-05 00:45:33,891 - INFO - Env 00, Goal (-01.1, 005.7), Episode 00005, setp 023, Reward -21.6, Distance 005.0, Crashed
+2020-09-05 00:45:37,564 - INFO - Env 00, Goal (-06.7, -03.2), Episode 00006, setp 141, Reward -39.9, Distance 005.8, Crashed
+2020-09-05 00:45:39,929 - INFO - Env 00, Goal (-03.5, -01.5), Episode 00007, setp 026, Reward -17.4, Distance 006.0, Crashed
+2020-09-05 00:45:42,686 - INFO - Env 00, Goal (001.1, 001.7), Episode 00008, setp 152, Reward -11.8, Distance 004.4, Time out
+2020-09-05 00:45:45,343 - INFO - Env 00, Goal (-01.7, -00.2), Episode 00009, setp 152, Reward -26.2, Distance 005.0, Time out
+2020-09-05 00:45:46,950 - INFO - Env 00, Goal (006.4, -00.1), Episode 00010, setp 043, Reward -24.8, Distance 004.2, Crashed
+2020-09-05 00:45:48,321 - INFO - Env 00, Goal (004.4, 002.3), Episode 00011, setp 029, Reward -22.7, Distance 005.1, Crashed
+2020-09-05 00:45:52,052 - INFO - Env 00, Goal (002.1, 001.4), Episode 00012, setp 152, Reward -15.5, Distance 004.2, Time out
+2020-09-05 00:45:54,808 - INFO - Env 00, Goal (000.4, 000.5), Episode 00013, setp 152, Reward -18.8, Distance 004.2, Time out
+2020-09-05 00:45:56,088 - INFO - Env 00, Goal (-03.4, 002.7), Episode 00014, setp 027, Reward -19.9, Distance 005.2, Crashed
+2020-09-05 00:45:58,819 - INFO - Env 00, Goal (-04.7, 001.4), Episode 00015, setp 066, Reward -13.5, Distance 005.3, Crashed
+2020-09-05 00:46:02,420 - INFO - Env 00, Goal (-05.9, 006.3), Episode 00016, setp 152, Reward -33.0, Distance 005.1, Time out
+2020-09-05 00:46:03,469 - INFO - Env 00, Goal (003.3, 002.5), Episode 00017, setp 004, Reward -15.7, Distance 004.3, Crashed
+2020-09-05 00:46:06,819 - INFO - Env 00, Goal (-02.2, -03.8), Episode 00018, setp 126, Reward -33.6, Distance 004.8, Crashed
+2020-09-05 00:46:09,382 - INFO - Env 00, Goal (003.2, 001.5), Episode 00019, setp 049, Reward -22.7, Distance 005.0, Crashed
+2020-09-05 00:46:13,020 - INFO - Env 00, Goal (002.0, 008.6), Episode 00020, setp 152, Reward -32.7, Distance 004.8, Time out
+2020-09-05 00:46:15,501 - INFO - Env 00, Goal (002.4, 007.1), Episode 00021, setp 108, Reward -23.9, Distance 004.2, Crashed
+2020-09-05 00:46:18,870 - INFO - Env 00, Goal (005.1, 002.9), Episode 00022, setp 122, Reward -44.4, Distance 004.3, Crashed
+2020-09-05 00:46:22,551 - INFO - Env 00, Goal (005.8, 003.7), Episode 00023, setp 152, Reward -6.2 , Distance 005.4, Time out
+2020-09-05 00:46:24,190 - INFO - Env 00, Goal (005.1, -01.7), Episode 00024, setp 061, Reward -24.8, Distance 005.5, Crashed
+2020-09-05 00:46:26,240 - INFO - Env 00, Goal (-00.2, -04.5), Episode 00025, setp 002, Reward -15.1, Distance 005.9, Crashed
+2020-09-05 00:46:28,629 - INFO - Env 00, Goal (001.6, -01.6), Episode 00026, setp 126, Reward 15.8 , Distance 005.8, Reach Goal
+2020-09-05 00:46:31,310 - INFO - Env 00, Goal (-01.3, -00.9), Episode 00027, setp 152, Reward -9.5 , Distance 006.0, Time out
+2020-09-05 00:46:33,754 - INFO - Env 00, Goal (000.4, 008.6), Episode 00028, setp 117, Reward -24.0, Distance 005.5, Crashed
+2020-09-05 00:46:37,700 - INFO - Env 00, Goal (005.1, 005.9), Episode 00029, setp 152, Reward -11.1, Distance 006.0, Time out
+2020-09-05 00:46:39,263 - INFO - Env 00, Goal (001.3, 004.8), Episode 00030, setp 050, Reward -27.5, Distance 004.9, Crashed
+2020-09-05 00:46:41,745 - INFO - Env 00, Goal (002.5, 001.5), Episode 00031, setp 042, Reward -20.5, Distance 005.5, Crashed
+2020-09-05 00:46:45,407 - INFO - Env 00, Goal (001.9, 005.3), Episode 00032, setp 152, Reward -31.4, Distance 005.4, Time out
+2020-09-05 00:46:46,869 - INFO - Env 00, Goal (003.2, -00.7), Episode 00033, setp 041, Reward -24.3, Distance 005.8, Crashed
+2020-09-05 00:46:50,572 - INFO - Env 00, Goal (003.2, 000.9), Episode 00034, setp 108, Reward -37.2, Distance 005.8, Crashed
+2020-09-05 00:46:52,869 - INFO - Env 00, Goal (004.4, -05.7), Episode 00035, setp 027, Reward -15.0, Distance 005.4, Crashed
+2020-09-05 00:46:56,870 - INFO - Env 00, Goal (-02.2, -06.2), Episode 00036, setp 152, Reward -21.4, Distance 004.7, Time out
+2020-09-05 00:46:59,521 - INFO - Env 00, Goal (004.4, -04.4), Episode 00037, setp 152, Reward -7.7 , Distance 005.6, Time out
+2020-09-05 00:47:01,541 - INFO - Env 00, Goal (-03.5, 001.5), Episode 00038, setp 093, Reward -25.9, Distance 005.5, Crashed
+2020-09-05 00:47:03,681 - INFO - Env 00, Goal (007.3, -01.7), Episode 00039, setp 007, Reward -16.0, Distance 005.9, Crashed
+2020-09-05 00:47:07,450 - INFO - Env 00, Goal (-06.9, 004.4), Episode 00040, setp 152, Reward -18.6, Distance 004.1, Time out
+2020-09-05 00:47:08,481 - INFO - Env 00, Goal (-00.2, -04.5), Episode 00041, setp 002, Reward -15.1, Distance 005.5, Crashed
+2020-09-05 00:47:10,150 - INFO - Env 00, Goal (-03.9, -02.6), Episode 00042, setp 057, Reward -24.8, Distance 004.4, Crashed
+2020-09-05 00:47:12,210 - INFO - Env 00, Goal (-04.2, -04.8), Episode 00043, setp 002, Reward -15.1, Distance 004.3, Crashed
+2020-09-05 00:47:14,910 - INFO - Env 00, Goal (-00.3, -00.7), Episode 00044, setp 152, Reward -10.0, Distance 005.3, Time out
+2020-09-05 00:47:17,490 - INFO - Env 00, Goal (008.8, -00.4), Episode 00045, setp 128, Reward -43.2, Distance 005.4, Crashed
+2020-09-05 00:47:21,257 - INFO - Env 00, Goal (-07.0, 002.7), Episode 00046, setp 152, Reward -22.0, Distance 005.2, Time out
+2020-09-05 00:47:23,143 - INFO - Env 00, Goal (-03.6, 000.2), Episode 00047, setp 072, Reward -34.5, Distance 005.5, Crashed
+2020-09-05 00:47:26,759 - INFO - Env 00, Goal (-01.8, -05.6), Episode 00048, setp 152, Reward -8.4 , Distance 005.7, Time out
+2020-09-05 00:47:28,591 - INFO - Env 00, Goal (-00.2, 001.4), Episode 00049, setp 066, Reward -15.1, Distance 005.8, Crashed
+2020-09-05 00:47:31,259 - INFO - Env 00, Goal (000.1, 003.1), Episode 00050, setp 152, Reward -9.8 , Distance 004.6, Time out
+2020-09-05 00:47:34,899 - INFO - Env 00, Goal (000.1, -04.2), Episode 00051, setp 140, Reward -47.1, Distance 004.4, Crashed
+2020-09-05 00:47:38,529 - INFO - Env 00, Goal (-06.0, -06.7), Episode 00052, setp 152, Reward -13.3, Distance 004.8, Time out
+2020-09-05 00:47:41,172 - INFO - Env 00, Goal (004.2, 000.7), Episode 00053, setp 152, Reward -25.2, Distance 005.0, Time out
+2020-09-05 00:47:42,481 - INFO - Env 00, Goal (-03.2, 000.5), Episode 00054, setp 025, Reward -21.2, Distance 005.8, Crashed
+2020-09-05 00:47:46,241 - INFO - Env 00, Goal (002.0, -07.9), Episode 00055, setp 152, Reward -30.0, Distance 005.8, Time out
+2020-09-05 00:47:48,970 - INFO - Env 00, Goal (-04.7, 002.5), Episode 00056, setp 152, Reward -6.9 , Distance 005.8, Time out
+2020-09-05 00:47:51,690 - INFO - Env 00, Goal (-07.8, -02.9), Episode 00057, setp 152, Reward -19.3, Distance 004.7, Time out
+2020-09-05 00:47:54,340 - INFO - Env 00, Goal (004.5, 006.0), Episode 00058, setp 152, Reward -28.9, Distance 005.4, Time out
+2020-09-05 00:47:56,004 - INFO - Env 00, Goal (-01.3, -03.0), Episode 00059, setp 056, Reward -26.1, Distance 004.9, Crashed
+2020-09-05 00:47:58,171 - INFO - Env 00, Goal (000.4, -02.3), Episode 00060, setp 011, Reward -16.7, Distance 005.8, Crashed
+2020-09-05 00:48:32,801 - INFO - #####################################
+2020-09-05 00:48:32,801 - INFO - ############Start Training###########
+2020-09-05 00:48:32,801 - INFO - #####################################
+2020-09-05 00:48:49,870 - INFO - Env 00, Goal (006.4, -00.1), Episode 00001, setp 052, Reward -25.3, Distance 005.5, Crashed
+2020-09-05 00:49:24,990 - INFO - Env 00, Goal (-01.3, 007.0), Episode 00002, setp 152, Reward -7.1 , Distance 005.1, Time out
+2020-09-05 00:49:35,090 - INFO - Env 00, Goal (002.0, 006.8), Episode 00003, setp 002, Reward -15.1, Distance 004.8, Crashed
+2020-09-05 00:49:59,071 - INFO - Env 00, Goal (-02.9, 005.3), Episode 00004, setp 041, Reward -24.3, Distance 005.1, Crashed
+2020-09-05 00:50:32,383 - INFO - Env 00, Goal (-00.8, 003.1), Episode 00005, setp 134, Reward -27.6, Distance 005.1, Crashed
+2020-09-05 00:50:57,469 - INFO - Env 00, Goal (-03.2, -08.2), Episode 00006, setp 152, Reward -29.1, Distance 004.1, Time out
+2020-09-05 00:51:16,503 - INFO - Env 00, Goal (-03.2, -00.8), Episode 00007, setp 091, Reward -36.3, Distance 004.2, Crashed
+2020-09-05 00:51:51,587 - INFO - Env 00, Goal (-02.6, 001.1), Episode 00008, setp 152, Reward -18.2, Distance 005.9, Time out
+2020-09-05 00:52:16,771 - INFO - Env 00, Goal (-00.1, -02.1), Episode 00009, setp 152, Reward -12.4, Distance 005.2, Time out
+2020-09-05 00:52:35,097 - INFO - Env 00, Goal (006.7, 003.8), Episode 00010, setp 084, Reward -22.4, Distance 006.0, Crashed
+2020-09-05 00:52:55,869 - INFO - Env 00, Goal (-05.7, 000.3), Episode 00011, setp 009, Reward -16.9, Distance 004.4, Crashed
+2020-09-05 00:53:23,566 - INFO - Env 00, Goal (002.4, -06.7), Episode 00012, setp 077, Reward -18.5, Distance 005.1, Crashed
+2020-09-05 00:53:58,764 - INFO - Env 00, Goal (005.0, -05.3), Episode 00013, setp 152, Reward -16.0, Distance 005.8, Time out
+2020-09-05 00:54:23,886 - INFO - Env 00, Goal (-03.9, 001.1), Episode 00014, setp 152, Reward -15.3, Distance 005.3, Time out
+2020-09-05 00:54:48,963 - INFO - Env 00, Goal (-07.0, 001.7), Episode 00015, setp 152, Reward -21.1, Distance 004.2, Time out
+2020-09-05 00:56:13,504 - INFO - #####################################
+2020-09-05 00:56:13,504 - INFO - ############Start Training###########
+2020-09-05 00:56:13,505 - INFO - #####################################
+2020-09-05 00:56:15,457 - INFO - Env 00, Goal (-00.8, 008.8), Episode 00001, setp 063, Reward -20.5, Distance 005.4, Crashed
+2020-09-05 00:56:20,185 - INFO - Env 00, Goal (-04.2, -07.7), Episode 00002, setp 132, Reward -31.2, Distance 004.1, Crashed
+2020-09-05 00:56:22,374 - INFO - Env 00, Goal (-03.5, 005.7), Episode 00003, setp 052, Reward -14.7, Distance 005.1, Crashed
+2020-09-05 00:56:24,498 - INFO - Env 00, Goal (-05.7, -01.1), Episode 00004, setp 002, Reward -15.1, Distance 004.2, Crashed
+2020-09-05 00:56:27,057 - INFO - Env 00, Goal (001.9, 000.5), Episode 00005, setp 052, Reward -25.0, Distance 004.6, Crashed
+2020-09-05 01:07:26,387 - INFO - #####################################
+2020-09-05 01:07:26,388 - INFO - ############Start Training###########
+2020-09-05 01:07:26,389 - INFO - #####################################
+2020-09-05 01:07:29,404 - INFO - Env 00, Goal (-03.9, -01.3), Episode 00001, setp 080, Reward -23.7, Distance 005.3, Crashed
+2020-09-05 01:07:32,105 - INFO - Env 00, Goal (003.0, 002.3), Episode 00002, setp 081, Reward -38.3, Distance 004.7, Crashed
+2020-09-05 01:07:37,515 - INFO - Env 00, Goal (002.9, -02.4), Episode 00003, setp 152, Reward -9.6 , Distance 005.9, Time out
+2020-09-05 01:07:38,650 - INFO - Env 00, Goal (001.0, -02.2), Episode 00004, setp 029, Reward -22.9, Distance 005.1, Crashed
+2020-09-05 01:07:39,196 - INFO - Env 00, Goal (-03.2, -00.0), Episode 00005, setp 002, Reward -15.1, Distance 005.2, Crashed
+2020-09-05 01:07:44,564 - INFO - Env 00, Goal (003.1, 003.8), Episode 00006, setp 152, Reward -19.5, Distance 004.5, Time out

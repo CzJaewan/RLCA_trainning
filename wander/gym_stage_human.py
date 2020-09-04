@@ -50,7 +50,7 @@ class StageWorld():
         self.stop_counter = 0
 
         # -----------Publisher and Subscriber-------------
-        cmd_vel_topic = 'huma1_' + str(index) + '/cmd_vel'
+        cmd_vel_topic = 'human_' + str(index) + '/cmd_vel'
         self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10000)
 
         cmd_pose_topic = 'human_' + str(index) + '/cmd_pose'

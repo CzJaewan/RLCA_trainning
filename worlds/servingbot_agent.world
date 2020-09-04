@@ -137,7 +137,7 @@ define agent position
 define human1 position
 (
   # actual size
-  size [0.50 0.50 0.60] # sizes from MobileRobots' web site
+  size [0.4 0.40 0.60] # sizes from MobileRobots' web site
 
   localization "odom"
   
@@ -147,7 +147,8 @@ define human1 position
   # draw a nose on the robot so we can see which way it points
   gui_nose 1
 
-  eyes(
+    
+  sicklaser(
 	pose [ 0 0 0 0 ] 
   )
 
@@ -172,44 +173,21 @@ define human2 position
   # draw a nose on the robot so we can see which way it points
   gui_nose 1
 
-  eyes(
+   
+  sicklaser(
 	pose [ 0 0 0 0 ] 
   )
 
   color "random"
   drive "diff"		 	# Differential steering model.
   obstacle_return 1           	# Can hit things.
-  ranger_return 0.5            	# reflects sonar beams
+  ranger_return 1            	# reflects sonar beams
   blob_return 1               	# Seen by blobfinders  
   fiducial_return 1           	# Seen as "1" fiducial finders
 )
 
-define human4 position
-(
-  # actual size
-  size [0.7 0.7 0.60] # sizes from MobileRobots' web site
 
-  localization "odom"
-  
-  # the pioneer's center of rotation is offset from its center of area
-  origin [0 0 0 0]
-
-  # draw a nose on the robot so we can see which way it points
-  gui_nose 1
-
-  eyes(
-	pose [ 0 0 0 0 ] 
-  )
-
-  color "random"
-  drive "diff"		 	# Differential steering model.
-  obstacle_return 1           	# Can hit things.
-  ranger_return 0.5            	# reflects sonar beams
-  blob_return 1               	# Seen by blobfinders  
-  fiducial_return 1           	# Seen as "1" fiducial finders
-)
-
-define human5 position
+define human3 position
 (
   size [0.57 0.64 0.30] # sizes from MobileRobots' web site
   block( 
@@ -230,19 +208,17 @@ define human5 position
   # the pioneer's center of rotation is offset from its center of area
   origin [0 0 0 0]
 
-  # draw a nose on the robot so we can see which way it points
-  gui_nose 1
-
-  eyes(
+   
+  sicklaser(
 	pose [ 0 0 0 0 ] 
   )
-
+  
   color "random"
   drive "diff"		 	# Differential steering model.
   obstacle_return 1           	# Can hit things.
-  ranger_return 0.5            	# reflects sonar beams
-  blob_return 1               	# Seen by blobfinders  
-  fiducial_return 1           	# Seen as "1" fiducial finders
+  ranger_return 1            	# reflects sonar beams
+  blob_return 0               	# Seen by blobfinders  
+  fiducial_return 0           	# Seen as "1" fiducial finders
 )
 
 
@@ -257,14 +233,11 @@ agent( pose [8.00 0.00 0.00 180.00]  name "robot_0" color "red")
 #agent( pose [-4.00 6.93 0.00 300.00] name "robot_8")
 #agent( pose [-5.66 5.66 0.00 315.00] name "robot_9")
 
-human1( pose [-8.00 0.00 0.00 0.00]  name "human_0")
-human2( pose [7.73 2.07 0.00 195.00] name "human_1")
-human4( pose [5.66 5.66 0.00 225.00] name "human_2")
-human5( pose [4.00 -6.93 0.00 135.00] name "human_3")
+human1( pose [-8.00 0.00 0.00 0.00]  name "fake_0")
+human2( pose [7.73 2.07 0.00 195.00] name "fake_1")
+human3( pose [5.66 5.66 0.00 225.00] name "fake_2")
 
-
-human1( pose [4.00 6.93 0.00 240.00] name "human_4")
-human2( pose [2.07 7.73 0.00 255.00] name "human_5")
-human4( pose [-2.07 7.73 0.00 285.00] name "human_6")
-human5( pose [-0.00 -8.00 0.00 90.00] name "human_7")
+human1( pose [4.00 6.93 0.00 240.00] name "fake_3")
+human2( pose [2.07 7.73 0.00 255.00] name "fake_4")
+human3( pose [-2.07 7.73 0.00 285.00] name "fake_5")
 

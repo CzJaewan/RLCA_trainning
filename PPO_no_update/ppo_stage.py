@@ -18,17 +18,17 @@ from model.ppo import generate_action
 from model.ppo import transform_buffer
 
 
-MAX_EPISODES = 100000
+MAX_EPISODES = 1000000
 LASER_BEAM = 512
 LASER_HIST = 3
-HORIZON = 3600 #3072
+HORIZON = 600 #3072
 GAMMA = 0.99
 LAMDA = 0.95
 BATCH_SIZE = 1024
 EPOCH = 2
 COEFF_ENTROPY = 5e-4
 CLIP_VALUE = 0.1
-NUM_ENV = 1
+NUM_ENV = 6
 OBS_SIZE = 512
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5

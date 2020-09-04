@@ -19,7 +19,7 @@ class StageWorld():
 
         self.robot_radius = [robot_radius]
 
-        node_name = 'StageEnv_' + str(index)
+        node_name = 'StagefakeEnv_' + str(index)
         rospy.init_node(node_name, anonymous=None)
 
         self.beam_mum = beam_num
@@ -46,29 +46,29 @@ class StageWorld():
 
         # -----------Publisher and Subscriber-------------
 
-        cmd_vel_topic = 'robot_' + str(index) + '/cmd_vel'
+        cmd_vel_topic = 'fake_' + str(index) + '/cmd_vel'
         self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10)
 
-        cmd_pose_topic = 'robot_' + str(index) + '/cmd_pose'
+        cmd_pose_topic = 'fake_' + str(index) + '/cmd_pose'
         self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=2)
         
-        goal_point_topic = 'robot_' + str(index) + '/pub_goal_point'
+        goal_point_topic = 'fake_' + str(index) + '/pub_goal_point'
         self.pub_goal_point = rospy.Publisher(goal_point_topic, Pose, queue_size=2)
 
 
         # ---------Subscriber-----------------
 
-        object_state_topic = 'robot_' + str(index) + '/base_pose_ground_truth'
+        object_state_topic = 'fake_' + str(index) + '/base_pose_ground_truth'
         self.object_state_sub = rospy.Subscriber(object_state_topic, Odometry, self.ground_truth_callback)
 
-        laser_topic = 'robot_'+ str(index) + '/base_scan'
+        laser_topic = 'fake_'+ str(index) + '/base_scan'
 
         self.laser_sub = rospy.Subscriber(laser_topic, LaserScan, self.laser_scan_callback)
 
-        odom_topic = 'robot_' + str(index) + '/odom'
+        odom_topic = 'fake_' + str(index) + '/odom'
         self.odom_sub = rospy.Subscriber(odom_topic, Odometry, self.odometry_callback)
 
-        crash_topic = 'robot_' + str(index) + '/is_crashed'
+        crash_topic = 'fake_' + str(index) + '/is_crashed'
         self.check_crash = rospy.Subscriber(crash_topic, Int8, self.crash_callback)
 
 

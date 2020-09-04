@@ -21,7 +21,7 @@ BATCH_SIZE = 1024
 EPOCH = 2
 COEFF_ENTROPY = 5e-4
 CLIP_VALUE = 0.1
-NUM_ENV = 16
+NUM_ENV = 12
 OBS_SIZE = 8
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
@@ -32,7 +32,7 @@ def run(env):
     
         env.step()
         
-        rospy.sleep(0.1)
+        rospy.sleep(0.5)
 
 
 if __name__ == '__main__':
