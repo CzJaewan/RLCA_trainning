@@ -52,13 +52,13 @@ class StageWorld():
 
         # -----------Publisher and Subscriber-------------
         cmd_vel_topic = 'human_' + str(index) + '/cmd_vel'
-        self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10)
+        self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10000)
 
         cmd_pose_topic = 'human_' + str(index) + '/cmd_pose'
-        self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=2)
+        self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=10000)
         
         goal_point_topic = 'human_' + str(index) + '/pub_goal_point'
-        self.pub_goal_point = rospy.Publisher(goal_point_topic, Pose, queue_size=2)
+        self.pub_goal_point = rospy.Publisher(goal_point_topic, Pose, queue_size=10000)
 
 
         # ---------Subscriber-----------------
@@ -142,7 +142,6 @@ class StageWorld():
         self.cmd_vel.publish(move_cmd)
 
 
-
     def control_pose(self, pose):
         pose_cmd = Pose()
         assert len(pose)==3
@@ -166,11 +165,11 @@ class StageWorld():
         
         max_obs = obs.max()
           
-        if min_obs > -0.35:
+        if min_obs > -0.30:
             self.ctr_flag = 0
 
         else :
-            if min_index < 2:
+            if min_index < 4:
                 self.ctr_flag = 1
             else : 
                 self.ctr_flag = 2
@@ -183,8 +182,10 @@ class StageWorld():
         random_v = np.random.uniform(0.5, 1.0)
         random_w = np.random.uniform(-0.7, 0.7)
 
+        
         if is_crash:
             self.reset_pose()
+        
 
         if random_w > 0.5 or random_w < -0.5:
             random_w = 0
@@ -193,20 +194,22 @@ class StageWorld():
 
             action = [random_v,random_w]
             self.control_vel(action)
-            rospy.sleep(0.001)
+            rospy.sleep(0.1)
 
         elif self.ctr_flag == 1:
-
-            action = [0.0, 0.5]
-            self.control_pose([state_human[0], state_human[1], state_human[2] + random_theta])
-            rospy.sleep(0.001)
+            r_w = np.random.uniform(3, 3.5)
+            action = [0.0, r_w]
+            #self.control_pose([state_human[0], state_human[1], state_human[2] + random_theta])
+            self.control_vel(action)            
+            rospy.sleep(0.1)
         
         elif self.ctr_flag == 2:
+            r_w = np.random.uniform(-3, -3.5)
+            action = [0.0, r_w]
 
-            action = [0.0, -0.5]
-            self.control_pose([state_human[0], state_human[1], state_human[2] - random_theta])
-            rospy.sleep(0.001)
-
+            #self.control_pose([state_human[0], state_human[1], state_human[2] - random_theta])
+            self.control_vel(action)            
+            rospy.sleep(0.1)
 
 
     def get_state(self):
@@ -276,7 +279,7 @@ class StageWorld():
         self.step_goal = [0., 0.]
         self.step_r_cnt = 0.
         self.start_time = time.time()
-        rospy.sleep(0.5)
+        rospy.sleep(2)
 
     def generate_goal_point(self): #episode 
         [x_g, y_g] = self.generate_random_goal()
@@ -290,7 +293,7 @@ class StageWorld():
     def reset_pose(self):
 
         random_pose = self.generate_random_pose()
-        rospy.sleep(0.01)
+        rospy.sleep(5.0)
         self.control_pose(random_pose)
         [x_robot, y_robot, theta] = self.get_self_stateGT()
 
@@ -298,7 +301,7 @@ class StageWorld():
         while np.abs(random_pose[0] - x_robot) > 0.2 or np.abs(random_pose[1] - y_robot) > 0.2:
             [x_robot, y_robot, theta] = self.get_self_stateGT()
             self.control_pose(random_pose)
-        rospy.sleep(0.01)
+        rospy.sleep(5.0)
 
 
     def generate_random_pose(self):

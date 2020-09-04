@@ -125,6 +125,7 @@ class StageWorld():
         self.sim_time = clock.clock.secs + clock.clock.nsecs / 1000000000.
 
     def crash_callback(self, flag):
+
         self.is_crashed = flag.data
 
     def get_self_stateGT(self):
@@ -232,7 +233,7 @@ class StageWorld():
             terminate = True
             reward_g = 15
             result = 'Reach Goal'
-        
+ 
         if is_crash == 1:
             terminate = True
             reward_c = -15.

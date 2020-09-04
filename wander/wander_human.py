@@ -21,8 +21,8 @@ BATCH_SIZE = 1024
 EPOCH = 2
 COEFF_ENTROPY = 5e-4
 CLIP_VALUE = 0.1
-NUM_ENV = 6
-OBS_SIZE = 512
+NUM_ENV = 10
+OBS_SIZE = 8
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
 
@@ -32,7 +32,7 @@ def run(env):
     
         env.step()
         
-        rospy.sleep(0.001)
+        rospy.sleep(0.1)
 
 
 if __name__ == '__main__':
@@ -41,9 +41,10 @@ if __name__ == '__main__':
 
     rank = comm.Get_rank()
     size = comm.Get_size()
+
     print("go")
 
-    env = StageWorld(512, index=rank, num_env=NUM_ENV)
+    env = StageWorld(8, index=rank, num_env=NUM_ENV)
     
     print("ENV")
  
