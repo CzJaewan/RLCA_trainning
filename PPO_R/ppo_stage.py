@@ -32,7 +32,7 @@ NUM_ENV = 1
 OBS_SIZE = 512
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
-RADIUS = 0.1
+RADIUS = 0.3
 
 def run(comm, env, policy, policy_path, action_bound, optimizer):
 

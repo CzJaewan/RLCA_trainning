@@ -93,8 +93,20 @@ window
 
 define agent position
 (
+  size [0.57 0.64 0.30] # sizes from MobileRobots' web site
+  block( 
+    points 8
+    point[0] [0.14 0.00]
+    point[1] [0.39 0.00]
+    point[2] [0.57 0.20]
+    point[3] [0.57 0.44]
+    point[0] [0.39 0.64]
+    point[1] [0.14 0.64]
+    point[2] [0.00 0.455]
+    point[3] [0.00 0.185]
+    z [0 0.3]
+  )
   # actual size
-  size [0.650 0.600 0.30] # sizes from MobileRobots' web site
 
   localization "odom"
   
@@ -112,7 +124,7 @@ define agent position
   fiducial_return 1           	# Seen as "1" fiducial finders
   
   sicklaser(
-	pose [ 0.3 0 0 0 ] 
+	pose [ 0.2 0 0 0 ] 
   )
 
 
@@ -150,7 +162,7 @@ define human1 position
 define human2 position
 (
   # actual size
-  size [0.650 0.600 0.30] # sizes from MobileRobots' web site
+  size [0.570 0.640 0.30] # sizes from MobileRobots' web site
 
   localization "odom"
   
@@ -222,6 +234,42 @@ define human4 position
   fiducial_return 1           	# Seen as "1" fiducial finders
 )
 
+define human4 position
+(
+  size [0.57 0.64 0.30] # sizes from MobileRobots' web site
+  block( 
+    points 8
+    point[0] [0.14 0.00]
+    point[1] [0.39 0.00]
+    point[2] [0.57 0.20]
+    point[3] [0.57 0.44]
+    point[0] [0.39 0.64]
+    point[1] [0.14 0.64]
+    point[2] [0.00 0.455]
+    point[3] [0.00 0.185]
+    z [0 0.3]
+  )
+
+  localization "odom"
+  
+  # the pioneer's center of rotation is offset from its center of area
+  origin [0 0 0 0]
+
+  # draw a nose on the robot so we can see which way it points
+  gui_nose 1
+
+  eyes(
+	pose [ 0 0 0 0 ] 
+  )
+
+  color "random"
+  drive "diff"		 	# Differential steering model.
+  obstacle_return 1           	# Can hit things.
+  ranger_return 0.5            	# reflects sonar beams
+  blob_return 1               	# Seen by blobfinders  
+  fiducial_return 1           	# Seen as "1" fiducial finders
+)
+
 
 agent( pose [8.00 0.00 0.00 180.00]  name "robot_0" color "red")
 agent( pose [7.73 2.07 0.00 195.00] name "robot_1" color "blue")
@@ -242,6 +290,6 @@ human1( pose [4.00 6.93 0.00 240.00] name "human_4")
 human2( pose [2.07 7.73 0.00 255.00] name "human_5")
 human3( pose [-0.00 8.00 0.00 270.00] name "human_6")
 human4( pose [-2.07 7.73 0.00 285.00] name "human_7")
-
-
+human5( pose [4.00 -6.93 0.00 135.00] name "human_8")
+human5( pose [-0.00 -8.00 0.00 90.00] name "human_9")
 

@@ -88,7 +88,7 @@ class StageWorld():
         self.is_crashed = None
 
         self.is_collision = 0
-        self.lidar_danger = 0.9
+        self.lidar_danger = 1.0 - robot_radius
         self.scan_min = 10.0
 
         while self.scan is None or self.speed is None or self.state is None or self.speed_GT is None or self.state_GT is None:
