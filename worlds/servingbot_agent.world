@@ -147,11 +147,6 @@ define human1 position
   # draw a nose on the robot so we can see which way it points
   gui_nose 1
 
-    
-  sicklaser(
-	pose [ 0 0 0 0 ] 
-  )
-
   color "random"
   drive "diff"		 	# Differential steering model.
   obstacle_return 1           	# Can hit things.
@@ -173,10 +168,6 @@ define human2 position
   # draw a nose on the robot so we can see which way it points
   gui_nose 1
 
-   
-  sicklaser(
-	pose [ 0 0 0 0 ] 
-  )
 
   color "random"
   drive "diff"		 	# Differential steering model.
@@ -208,10 +199,6 @@ define human3 position
   # the pioneer's center of rotation is offset from its center of area
   origin [0 0 0 0]
 
-   
-  sicklaser(
-	pose [ 0 0 0 0 ] 
-  )
   
   color "random"
   drive "diff"		 	# Differential steering model.
@@ -223,11 +210,13 @@ define human3 position
 
 
 agent( pose [8.00 0.00 0.00 180.00]  name "robot_0" color "red")
-#agent( pose [7.73 2.07 0.00 195.00] name "robot_1" color "blue")
-#agent( pose [6.93 4.00 0.00 210.00] name "robot_2" color "yellow")
-#agent( pose [5.66 5.66 0.00 225.00] name "robot_3")
-#agent( pose [4.00 6.93 0.00 240.00] name "robot_4")
-#agent( pose [2.07 7.73 0.00 255.00] name "robot_5")
+
+agent( pose [-7.73 2.07 0.00 0.00] name "robot_1" color "blue")
+agent( pose [-6.93 4.00 0.00 -30.00] name "robot_2" color "yellow")
+agent( pose [-5.66 5.66 0.00 -55.00] name "robot_3" color "black")
+agent( pose [-4.00 6.93 0.00 -60.00] name "robot_4" color "green")
+agent( pose [-2.07 7.73 0.00 -85.00] name "robot_5")
+
 #agent( pose [-0.00 8.00 0.00 270.00] name "robot_6")
 #agent( pose [-2.07 7.73 0.00 285.00] name "robot_7")
 #agent( pose [-4.00 6.93 0.00 300.00] name "robot_8")
@@ -236,8 +225,7 @@ agent( pose [8.00 0.00 0.00 180.00]  name "robot_0" color "red")
 human1( pose [-8.00 0.00 0.00 0.00]  name "fake_0")
 human2( pose [7.73 2.07 0.00 195.00] name "fake_1")
 human3( pose [5.66 5.66 0.00 225.00] name "fake_2")
-
 human1( pose [4.00 6.93 0.00 240.00] name "fake_3")
 human2( pose [2.07 7.73 0.00 255.00] name "fake_4")
-human3( pose [-2.07 7.73 0.00 285.00] name "fake_5")
+#human3( pose [-2.07 7.73 0.00 285.00] name "fake_5")
 
