@@ -1,5 +1,5 @@
 # RLCA_trainning
-##Folder description
+## Folder description
 - main branch : multiagent
 - PPO_R : origin observation ( lidar, goal, speed ) + radius, lidar data ( lidar_(t-2), lidar_(t-1), lidar_(t)
 - PPO_R_lidar : PPO_R_new + lidar data ( lidar_(t-10), lidar_(t-5), lidar_(t)
@@ -9,7 +9,7 @@
 - wander_no_avoidance : wander code
 - worlds : stage model file
 
-##Setting
+## Setting
 ### Stage & stageros & ppo train py
 ```
   sudo apt-get install ros-kinetic-stage
@@ -22,7 +22,7 @@
   git branch stageros_w
 ```
 
-##Run
+## Run
 ### stage_run
 ```
   roscore
