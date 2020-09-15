@@ -11,7 +11,7 @@ from collections import deque
 
 from gym_stage_human import StageWorld
 
-MAX_EPISODES = 5000
+MAX_EPISODES = 1000000
 LASER_BEAM = 512
 LASER_HIST = 3
 HORIZON = 128
@@ -26,13 +26,33 @@ OBS_SIZE = 8
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
 
-def run(env):
+def run(comm, env):
+
+    if env.index == 0:
+        env.reset_world()
         
-    while True:
+
+
+    for id in range(MAX_EPISODES):
+
+        env.reset_pose()
+        
+        scaled_action = [[1,0],[1,0],[1,0]]
+
+        rospy.sleep(0.1)
+
+        terminate = False
     
-        env.step()
+        while not terminate and not rospy.is_shutdown():
+            
+            real_action = comm.scatter(scaled_action, root=0)
+
+            env.control_vel(real_action)
+
+            rospy.sleep(0.1)
+
+            terminate = env.step()
         
-        rospy.sleep(0.5)
 
 
 if __name__ == '__main__':
@@ -57,6 +77,6 @@ if __name__ == '__main__':
         print('####################################')
         
     try:
-        run(env=env)
+        run(comm=comm, env=env)
     except KeyboardInterrupt:
         pass

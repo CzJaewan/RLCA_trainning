@@ -198,7 +198,7 @@ if __name__ == '__main__':
     print("ENV")
     
     reward = None
-    action_bound = [[0, -1], [1, 1]] ####
+    action_bound = [[5, -0.2], [1, 0.2]] ####
     # torch.manual_seed(1)
     # np.random.seed(1)
     if rank == 0:

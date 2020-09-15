@@ -183,6 +183,9 @@ class StageWorld():
     def get_crash_state(self):
         return self.is_crashed
 
+    def get_collision_state(self):
+        return self.is_collision
+
     def get_sim_time(self):
         return self.sim_time
 
@@ -228,19 +231,20 @@ class StageWorld():
         result = 0
 
         is_crash = self.get_crash_state()
+        is_collision = self.get_collision_state()
 
 
         if self.distance < self.goal_size:
             terminate = True
             reward_g = 15
             result = 'Reach Goal'
- 
+        
         if is_crash == 1:
             terminate = True
             reward_c = -15.
             result = 'Crashed'  
-
-        if self.is_collision == 1:
+        
+        if is_collision == 1:
             terminate = True
             reward_c = -15.
             result = 'Crashed'
@@ -248,8 +252,10 @@ class StageWorld():
         if np.abs(w) >  1.05:
             reward_w = -0.1 * np.abs(w)
 
+        
         if (self.scan_min > self.robot_radius[0]) and (self.scan_min < (self.lidar_danger+self.robot_radius[0])):
             reward_ct = -0.25*((self.lidar_danger+self.robot_radius[0]) - self.scan_min)
+        
 
         if t > 150:
             terminate = True
@@ -267,12 +273,14 @@ class StageWorld():
         rospy.sleep(1.0)
         self.control_pose(random_pose)
         [x_robot, y_robot, theta] = self.get_self_stateGT()
-
+        
+        
         # start_time = time.time()
         while np.abs(random_pose[0] - x_robot) > 0.2 or np.abs(random_pose[1] - y_robot) > 0.2:
             [x_robot, y_robot, theta] = self.get_self_stateGT()
             self.control_pose(random_pose)
         #rospy.sleep(0.01)
+        
         rospy.sleep(1.0)
 
 
@@ -285,7 +293,6 @@ class StageWorld():
         move_cmd.angular.y = 0.
         move_cmd.angular.z = action[1]
         self.cmd_vel.publish(move_cmd)
-
 
     def control_pose(self, pose):
         pose_cmd = Pose()
@@ -320,8 +327,8 @@ class StageWorld():
         dis_origin = np.sqrt(x ** 2 + y ** 2)
         dis_goal = np.sqrt((x - self.init_pose[0]) ** 2 + (y - self.init_pose[1]) ** 2)
         while (dis_origin > 9 or dis_goal > 6 or dis_goal < 4) and not rospy.is_shutdown():
-            x = np.random.uniform(-9, 9)
-            y = np.random.uniform(-9, 9)
+            x = round(np.random.uniform(-9, 9),3)
+            y = round(np.random.uniform(-9, 9),3)
             dis_origin = np.sqrt(x ** 2 + y ** 2)
             dis_goal = np.sqrt((x - self.init_pose[0]) ** 2 + (y - self.init_pose[1]) ** 2)
             

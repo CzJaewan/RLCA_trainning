@@ -17,6 +17,8 @@ class StageWorld():
     def __init__(self, beam_num, index, num_env):
 
 
+        self.robot_radius = 0.4
+
         self.index = index
         self.num_env = num_env
         node_name = 'Stage_fake_Env_' + str(index)
@@ -46,30 +48,30 @@ class StageWorld():
         self.ctr_flag = 0
         self.ctr_pose = 0
 
-
+	
         # for get reward and terminate
         self.stop_counter = 0
 
         # -----------Publisher and Subscriber-------------
-        cmd_vel_topic = 'fake_' + str(index) + '/cmd_vel'
+        cmd_vel_topic = '/fake_' + str(index) + '/cmd_vel'
         self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10000)
 
-        cmd_pose_topic = 'fake_' + str(index) + '/cmd_pose'
+        cmd_pose_topic = '/fake_' + str(index) + '/cmd_pose'
         self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=10000)
 
         # ---------Subscriber-----------------
 
-        object_state_topic = 'fake_' + str(index) + '/base_pose_ground_truth'
+        object_state_topic = '/fake_' + str(index) + '/base_pose_ground_truth'
         self.object_state_sub = rospy.Subscriber(object_state_topic, Odometry, self.ground_truth_callback)
 
-        laser_topic = 'fake_'+ str(index) + '/base_scan'
+        laser_topic = '/fake_'+ str(index) + '/base_scan'
 
         self.laser_sub = rospy.Subscriber(laser_topic, LaserScan, self.laser_scan_callback)
 
-        odom_topic = 'fake_' + str(index) + '/odom'
+        odom_topic = '/fake_' + str(index) + '/odom'
         self.odom_sub = rospy.Subscriber(odom_topic, Odometry, self.odometry_callback)
 
-        crash_topic = 'fake_' + str(index) + '/is_crashed'
+        crash_topic = '/fake_' + str(index) + '/is_crashed'
         self.check_crash = rospy.Subscriber(crash_topic, Int8, self.crash_callback)
 
 
@@ -78,7 +80,9 @@ class StageWorld():
         # -----------Service-------------------
         self.reset_stage = rospy.ServiceProxy('reset_positions', Empty)
 
-
+        self.is_collision = 0
+        self.lidar_danger = 1.0 - self.robot_radius
+        self.scan_min = 6.0
 
         # # Wait until the first callback
         self.speed = None
@@ -86,7 +90,7 @@ class StageWorld():
         self.speed_GT = None
         self.state_GT = None
 
-        while self.speed is None or self.state is None or self.speed_GT is None or self.state_GT is None:
+        while self.scan is None or self.speed is None or self.state is None or self.speed_GT is None or self.state_GT is None:
             pass
        
         rospy.sleep(1.)
@@ -104,12 +108,32 @@ class StageWorld():
         self.speed_GT = [v, GT_odometry.twist.twist.angular.z]
 
     def laser_scan_callback(self, scan):
-
+        
         self.scan_param = [scan.angle_min, scan.angle_max, scan.angle_increment, scan.time_increment,
                            scan.scan_time, scan.range_min, scan.range_max]
         self.scan = np.array(scan.ranges)
         self.laser_cb_num += 1
+        self.collision_laser_flag(self.robot_radius)
 
+    def collision_laser_flag(self, r):
+        scan = copy.deepcopy(self.scan)
+        scan[np.isnan(scan)] = 10.0
+        scan[np.isinf(scan)] = 10.0
+
+        scan_min = np.min(scan)
+
+        if scan_min <= r:
+            self.is_collision = 1
+        else:
+            self.is_collision = 0
+
+        self.scan_min = scan_min
+
+    def get_collision_state(self):
+        return self.is_collision
+
+    def get_crash_state(self):
+        return self.is_crashed
 
     def odometry_callback(self, odometry):
 
@@ -154,27 +178,19 @@ class StageWorld():
 
 
     def step(self):
-
         
-        state_human  = self.get_self_stateGT()
+        terminate = False
         
-        is_crash = self.get_crash_state()
+        is_crashed = self.get_crash_state()
 
-        random_v = round(np.random.uniform(0.5, 1.0))
-        random_w = round(np.random.uniform(-0.7, 0.7),3)
+        if is_crashed:
+            terminate = True
+        else:
+            terminate = False
 
-        
-        if is_crash:
-            self.reset_pose()
-        
-
-        if random_w > 0.5 or random_w < -0.5:
-            random_w = 0
-
-        action = [random_v,random_w]
-        self.control_vel(action)
         rospy.sleep(0.1)
-
+       
+        return terminate 
 
     def get_state(self):
         
@@ -253,7 +269,6 @@ class StageWorld():
         self.pre_distance = np.sqrt(x ** 2 + y ** 2)  ## pre_distance -> distance -> 1step get_reward function -> pre_distance (no matched)
         self.distance = copy.deepcopy(self.pre_distance) # zero to local goal
 
-
     def reset_pose(self):
 
         random_pose = self.generate_random_pose()
@@ -261,11 +276,12 @@ class StageWorld():
         rospy.sleep(1.0)
         self.control_pose(random_pose)
         [x_robot, y_robot, theta] = self.get_self_stateGT()
-
+        
         # start_time = time.time()
         while np.abs(random_pose[0] - x_robot) > 0.2 or np.abs(random_pose[1] - y_robot) > 0.2:
             [x_robot, y_robot, theta] = self.get_self_stateGT()
             self.control_pose(random_pose)
+        
         rospy.sleep(1.0)
 
 

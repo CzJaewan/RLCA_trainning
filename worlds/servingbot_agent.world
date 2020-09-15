@@ -29,7 +29,7 @@ define eyes ranger
     pose [ 0 0 0.1 0 ]
     fov 180
     range [ 0.0 6.0 ]
-    samples 8
+    samples 512
   )
   color "random"
   block( 
@@ -93,7 +93,7 @@ window
 
 define agent position
 (
-  size [0.57 0.64 0.30] # sizes from MobileRobots' web site
+  size [0.57 0.64 0.60] # sizes from MobileRobots' web site
   block( 
     points 8
     point[0] [0.14 0.00]
@@ -119,12 +119,12 @@ define agent position
   color "random"
   drive "diff"		 	# Differential steering model.
   obstacle_return 1           	# Can hit things.
-  ranger_return 0.5            	# reflects sonar beams
+  ranger_return 1            	# reflects sonar beams
   blob_return 1               	# Seen by blobfinders  
   fiducial_return 1           	# Seen as "1" fiducial finders
   
   sicklaser(
-	pose [ 0.2 0 0 0 ] 
+	pose [ 0.2 0 -0.3 0 ] 
   )
 
 
@@ -139,7 +139,7 @@ define human1 position
   # actual size
   size [0.4 0.40 0.60] # sizes from MobileRobots' web site
 
-  localization "odom"
+  localization "gps"
   
   # the pioneer's center of rotation is offset from its center of area
   origin [0 0 0 0]
@@ -150,17 +150,19 @@ define human1 position
   color "random"
   drive "diff"		 	# Differential steering model.
   obstacle_return 1           	# Can hit things.
-  ranger_return 0.5            	# reflects sonar beams
+  ranger_return 1            	# reflects sonar beams
   blob_return 1               	# Seen by blobfinders  
   fiducial_return 1           	# Seen as "1" fiducial finders
+
+
 )
 
 define human2 position
 (
   # actual size
-  size [0.570 0.640 0.30] # sizes from MobileRobots' web site
+  size [0.570 0.640 0.60] # sizes from MobileRobots' web site
 
-  localization "odom"
+  localization "gps"
   
   # the pioneer's center of rotation is offset from its center of area
   origin [0 0 0 0]
@@ -175,12 +177,14 @@ define human2 position
   ranger_return 1            	# reflects sonar beams
   blob_return 1               	# Seen by blobfinders  
   fiducial_return 1           	# Seen as "1" fiducial finders
+
+
 )
 
 
 define human3 position
 (
-  size [0.57 0.64 0.30] # sizes from MobileRobots' web site
+  size [0.57 0.64 0.60] # sizes from MobileRobots' web site
   block( 
     points 8
     point[0] [0.14 0.00]
@@ -194,18 +198,21 @@ define human3 position
     z [0 0.3]
   )
 
-  localization "odom"
-  
+  localization "gps"
+
+
   # the pioneer's center of rotation is offset from its center of area
   origin [0 0 0 0]
-
-  
+    
   color "random"
   drive "diff"		 	# Differential steering model.
   obstacle_return 1           	# Can hit things.
   ranger_return 1            	# reflects sonar beams
-  blob_return 0               	# Seen by blobfinders  
-  fiducial_return 0           	# Seen as "1" fiducial finders
+  blob_return 1               	# Seen by blobfinders  
+  fiducial_return 1           	# Seen as "1" fiducial finders
+
+
+
 )
 
 
@@ -214,8 +221,8 @@ agent( pose [8.00 0.00 0.00 180.00]  name "robot_0" color "red")
 agent( pose [-7.73 2.07 0.00 0.00] name "robot_1" color "blue")
 agent( pose [-6.93 4.00 0.00 -30.00] name "robot_2" color "yellow")
 agent( pose [-5.66 5.66 0.00 -55.00] name "robot_3" color "black")
-agent( pose [-4.00 6.93 0.00 -60.00] name "robot_4" color "green")
-agent( pose [-2.07 7.73 0.00 -85.00] name "robot_5")
+#agent( pose [-4.00 6.93 0.00 -60.00] name "robot_4" color "green")
+#agent( pose [-2.07 7.73 0.00 -85.00] name "robot_5")
 
 #agent( pose [-0.00 8.00 0.00 270.00] name "robot_6")
 #agent( pose [-2.07 7.73 0.00 285.00] name "robot_7")
@@ -225,7 +232,7 @@ agent( pose [-2.07 7.73 0.00 -85.00] name "robot_5")
 human1( pose [-8.00 0.00 0.00 0.00]  name "fake_0")
 human2( pose [7.73 2.07 0.00 195.00] name "fake_1")
 human3( pose [5.66 5.66 0.00 225.00] name "fake_2")
-human1( pose [4.00 6.93 0.00 240.00] name "fake_3")
-human2( pose [2.07 7.73 0.00 255.00] name "fake_4")
+#human1( pose [4.00 6.93 0.00 240.00] name "fake_3")
+#human2( pose [2.07 7.73 0.00 255.00] name "fake_4")
 #human3( pose [-2.07 7.73 0.00 285.00] name "fake_5")
 
