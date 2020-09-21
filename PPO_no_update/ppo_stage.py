@@ -21,14 +21,14 @@ from model.ppo import transform_buffer
 MAX_EPISODES = 1000000
 LASER_BEAM = 512
 LASER_HIST = 3
-HORIZON = 600 #3072
+HORIZON = 1200 #3072
 GAMMA = 0.99
 LAMDA = 0.95
 BATCH_SIZE = 1024
 EPOCH = 2
 COEFF_ENTROPY = 5e-4
 CLIP_VALUE = 0.1
-NUM_ENV = 6
+NUM_ENV = 3
 OBS_SIZE = 512
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
@@ -198,7 +198,7 @@ if __name__ == '__main__':
     print("ENV")
     
     reward = None
-    action_bound = [[0, -1], [1, 1]] ####
+    action_bound = [[5, -0.2], [1, 0.2]] ####
     # torch.manual_seed(1)
     # np.random.seed(1)
     if rank == 0:

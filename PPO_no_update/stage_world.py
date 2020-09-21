@@ -46,39 +46,36 @@ class StageWorld():
 
         # -----------Publisher and Subscriber-------------
 
-        cmd_vel_topic = 'fake_' + str(index) + '/cmd_vel'
+        cmd_vel_topic = '/fake_' + str(index) + '/cmd_vel'
         self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10)
 
-        cmd_pose_topic = 'fake_' + str(index) + '/cmd_pose'
+        cmd_pose_topic = '/fake_' + str(index) + '/cmd_pose'
         self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=2)
         
-        goal_point_topic = 'fake_' + str(index) + '/pub_goal_point'
+        goal_point_topic = '/fake_' + str(index) + '/pub_goal_point'
         self.pub_goal_point = rospy.Publisher(goal_point_topic, Pose, queue_size=2)
 
 
         # ---------Subscriber-----------------
 
-        object_state_topic = 'fake_' + str(index) + '/base_pose_ground_truth'
+        object_state_topic = '/fake_' + str(index) + '/base_pose_ground_truth'
         self.object_state_sub = rospy.Subscriber(object_state_topic, Odometry, self.ground_truth_callback)
 
-        laser_topic = 'fake_'+ str(index) + '/base_scan'
+        laser_topic = '/fake_'+ str(index) + '/base_scan'
 
         self.laser_sub = rospy.Subscriber(laser_topic, LaserScan, self.laser_scan_callback)
 
-        odom_topic = 'fake_' + str(index) + '/odom'
+        odom_topic = '/fake_' + str(index) + '/odom'
         self.odom_sub = rospy.Subscriber(odom_topic, Odometry, self.odometry_callback)
 
-        crash_topic = 'fake_' + str(index) + '/is_crashed'
+        crash_topic = '/fake_' + str(index) + '/is_crashed'
         self.check_crash = rospy.Subscriber(crash_topic, Int8, self.crash_callback)
-
 
         self.sim_clock = rospy.Subscriber('clock', Clock, self.sim_clock_callback)
 
         # -----------Service-------------------
         
         self.reset_stage = rospy.ServiceProxy('reset_positions', Empty)
-
-
 
         # # Wait until the first callback
         self.speed = None
@@ -89,7 +86,7 @@ class StageWorld():
 
         self.is_collision = 0
         self.lidar_danger = 1.0 - robot_radius
-        self.scan_min = 10.0
+        self.scan_min = 6.0
 
         while self.scan is None or self.speed is None or self.state is None or self.speed_GT is None or self.state_GT is None:
             pass
@@ -136,8 +133,8 @@ class StageWorld():
 
     def get_laser_observation(self):
         scan = copy.deepcopy(self.scan)
-        scan[np.isnan(scan)] = 10.0
-        scan[np.isinf(scan)] = 10.0
+        scan[np.isnan(scan)] = 6.0
+        scan[np.isinf(scan)] = 6.0
         raw_beam_num = len(scan)
         sparse_beam_num = self.beam_mum
         step = float(raw_beam_num) / sparse_beam_num
@@ -156,12 +153,12 @@ class StageWorld():
             index -= step
 
         scan_sparse = np.concatenate((sparse_scan_left, sparse_scan_right[::-1]), axis=0)
-        return scan_sparse / 10.0 - 0.5
+        return scan_sparse / 6.0 - 0.5
 
     def collision_laser_flag(self, r):
         scan = copy.deepcopy(self.scan)
-        scan[np.isnan(scan)] = 10.0
-        scan[np.isinf(scan)] = 10.0
+        scan[np.isnan(scan)] = 6.0
+        scan[np.isinf(scan)] = 6.0
 
         scan_min = np.min(scan)
 
@@ -301,25 +298,26 @@ class StageWorld():
         self.cmd_pose.publish(pose_cmd)
 
     def generate_random_pose(self):
-        x = np.random.uniform(-9, 9)
-        y = np.random.uniform(-9, 9)
+        x = round(np.random.uniform(-9, 9), 3)
+        y = round(np.random.uniform(-9, 9), 3)
+
         dis = np.sqrt(x ** 2 + y ** 2)
         while (dis > 9) and not rospy.is_shutdown():
-            x = np.random.uniform(-9, 9)
-            y = np.random.uniform(-9, 9)
+            x = round(np.random.uniform(-9, 9), 3)
+            y = round(np.random.uniform(-9, 9), 3)
             dis = np.sqrt(x ** 2 + y ** 2)
-        theta = np.random.uniform(0, 2 * np.pi)
+        theta = round(np.random.uniform(0, 2 * np.pi),5)
         return [x, y, theta]
 
     def generate_random_goal(self):
         self.init_pose = self.get_self_stateGT()
-        x = np.random.uniform(-9, 9)
-        y = np.random.uniform(-9, 9)
+        x = round(np.random.uniform(-9, 9),3)
+        y = round(np.random.uniform(-9, 9),3)
         dis_origin = np.sqrt(x ** 2 + y ** 2)
         dis_goal = np.sqrt((x - self.init_pose[0]) ** 2 + (y - self.init_pose[1]) ** 2)
         while (dis_origin > 9 or dis_goal > 6 or dis_goal < 4) and not rospy.is_shutdown():
-            x = np.random.uniform(-9, 9)
-            y = np.random.uniform(-9, 9)
+            x = round(np.random.uniform(-9, 9),3)
+            y = round(np.random.uniform(-9, 9),3)
             dis_origin = np.sqrt(x ** 2 + y ** 2)
             dis_goal = np.sqrt((x - self.init_pose[0]) ** 2 + (y - self.init_pose[1]) ** 2)
             
@@ -340,7 +338,6 @@ class StageWorld():
 
 
     def generate_random_radius(self):
-        self.robot_radius = np.random.uniform(0.3, 1.5)
+        self.robot_radius = round(np.random.uniform(0.3, 1.5), 3)
         
-
     

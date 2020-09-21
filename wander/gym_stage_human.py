@@ -15,10 +15,10 @@ from std_msgs.msg import Int8
 
 class StageWorld():
     def __init__(self, beam_num, index, num_env):
-        print(index)
+
         self.index = index
         self.num_env = num_env
-        node_name = 'Stage_human_Env_' + str(index)
+        node_name = 'Stage_fake_Env_' + str(index)
         rospy.init_node(node_name, anonymous=None)
 
         self.beam_mum = beam_num
@@ -50,25 +50,25 @@ class StageWorld():
         self.stop_counter = 0
 
         # -----------Publisher and Subscriber-------------
-        cmd_vel_topic = 'human_' + str(index) + '/cmd_vel'
+        cmd_vel_topic = 'fake_' + str(index) + '/cmd_vel'
         self.cmd_vel = rospy.Publisher(cmd_vel_topic, Twist, queue_size=10000)
 
-        cmd_pose_topic = 'human_' + str(index) + '/cmd_pose'
+        cmd_pose_topic = 'fake_' + str(index) + '/cmd_pose'
         self.cmd_pose = rospy.Publisher(cmd_pose_topic, Pose, queue_size=10000)
 
         # ---------Subscriber-----------------
 
-        object_state_topic = 'human_' + str(index) + '/base_pose_ground_truth'
+        object_state_topic = 'fake_' + str(index) + '/base_pose_ground_truth'
         self.object_state_sub = rospy.Subscriber(object_state_topic, Odometry, self.ground_truth_callback)
 
-        laser_topic = 'human_'+ str(index) + '/base_scan'
+        laser_topic = 'fake_'+ str(index) + '/base_scan'
 
         self.laser_sub = rospy.Subscriber(laser_topic, LaserScan, self.laser_scan_callback)
 
-        odom_topic = 'human_' + str(index) + '/odom'
+        odom_topic = 'fake_' + str(index) + '/odom'
         self.odom_sub = rospy.Subscriber(odom_topic, Odometry, self.odometry_callback)
 
-        crash_topic = 'human_' + str(index) + '/is_crashed'
+        crash_topic = 'fake_' + str(index) + '/is_crashed'
         self.check_crash = rospy.Subscriber(crash_topic, Int8, self.crash_callback)
 
 
@@ -173,9 +173,9 @@ class StageWorld():
         
         is_crash = self.get_crash_state()
 
-        random_theta = np.random.uniform(0.2, 2.6)
-        random_v = np.random.uniform(0.5, 1.0)
-        random_w = np.random.uniform(-0.7, 0.7)
+        random_theta = round(np.random.uniform(0.2, 2.6),5)
+        random_v = round(np.random.uniform(0.5, 1.0),3)
+        random_w = round(np.random.uniform(-0.7, 0.7),3)
 
         
         if is_crash:
@@ -192,14 +192,14 @@ class StageWorld():
             rospy.sleep(0.1)
 
         elif self.ctr_flag == 1:
-            r_w = np.random.uniform(3, 3.5)
+            r_w = round(np.random.uniform(3, 3.5),3)
             action = [0.0, r_w]
             #self.control_pose([state_human[0], state_human[1], state_human[2] + random_theta])
             self.control_vel(action)            
             rospy.sleep(0.1)
         
         elif self.ctr_flag == 2:
-            r_w = np.random.uniform(-3, -3.5)
+            r_w = round(np.random.uniform(-3, -3.5),3)
             action = [0.0, r_w]
 
             #self.control_pose([state_human[0], state_human[1], state_human[2] - random_theta])
@@ -288,7 +288,7 @@ class StageWorld():
     def reset_pose(self):
 
         random_pose = self.generate_random_pose()
-        rospy.sleep(5.0)
+        rospy.sleep(1.0)
         self.control_pose(random_pose)
         [x_robot, y_robot, theta] = self.get_self_stateGT()
 
@@ -296,17 +296,17 @@ class StageWorld():
         while np.abs(random_pose[0] - x_robot) > 0.2 or np.abs(random_pose[1] - y_robot) > 0.2:
             [x_robot, y_robot, theta] = self.get_self_stateGT()
             self.control_pose(random_pose)
-        rospy.sleep(5.0)
+        rospy.sleep(1.0)
 
 
     def generate_random_pose(self):
 
-        x = np.random.uniform(-9, 9)
-        y = np.random.uniform(-9, 9)
+        x = round(np.random.uniform(-9, 9),3)
+        y = round(np.random.uniform(-9, 9),3)
         dis = np.sqrt(x ** 2 + y ** 2)
         while (dis > 9) and not rospy.is_shutdown():
-            x = np.random.uniform(-9, 9)
-            y = np.random.uniform(-9, 9)
+            x = round(np.random.uniform(-9, 9),3)
+            y = round(np.random.uniform(-9, 9),3)
             dis = np.sqrt(x ** 2 + y ** 2)
-        theta = np.random.uniform(0, 2 * np.pi)
+        theta = round(np.random.uniform(0, 2 * np.pi),5)
         return [x, y, theta]

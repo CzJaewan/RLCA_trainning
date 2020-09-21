@@ -21,18 +21,18 @@ from model.ppo import transform_buffer
 MAX_EPISODES = 100000
 LASER_BEAM = 512
 LASER_HIST = 3
-HORIZON = 3600 #3072
+HORIZON = 1000 #3072
 GAMMA = 0.99
 LAMDA = 0.95
 BATCH_SIZE = 1024
 EPOCH = 2
 COEFF_ENTROPY = 5e-4
 CLIP_VALUE = 0.1
-NUM_ENV = 1
+NUM_ENV = 4
 OBS_SIZE = 512
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
-RADIUS = 0.3
+RADIUS = 0.2
 
 def run(comm, env, policy, policy_path, action_bound, optimizer):
 
@@ -44,7 +44,6 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
     #world reset
     if env.index == 0:
         env.reset_world()
-
 
     for id in range(MAX_EPISODES):
         
@@ -82,7 +81,6 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
             # execute actions
             real_action = comm.scatter(scaled_action, root=0)
             #-------------------------------------------------------------------------            
-            
             ### step ############################################################
             ## run action
             env.control_vel(real_action)
@@ -104,7 +102,7 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
 
             s_next = env.get_laser_observation()
             left = obs_stack.popleft()
-            #left???????
+
             obs_stack.append(s_next)
             goal_next = np.asarray(env.get_local_goal())
             speed_next = np.asarray(env.get_self_speed())
@@ -202,7 +200,7 @@ if __name__ == '__main__':
     # torch.manual_seed(1)
     # np.random.seed(1)
     if rank == 0:
-        policy_path = 'policy_0831_radius_test'
+        policy_path = 'epi_100000'
         # policy = MLPPolicy(obs_size, act_size)
         policy = CNNPolicy(frames=LASER_HIST, action_space=2)
         policy.cuda()
@@ -213,7 +211,7 @@ if __name__ == '__main__':
         if not os.path.exists(policy_path):
             os.makedirs(policy_path)
 
-        file = policy_path + '/stage_50000.pth'
+        file = policy_path + '/epi_99000.pth'
         if os.path.exists(file):
             logger.info('####################################')
             logger.info('############Loading Model###########')
