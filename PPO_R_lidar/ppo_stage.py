@@ -205,7 +205,7 @@ if __name__ == '__main__':
     # torch.manual_seed(1)
     # np.random.seed(1)
     if rank == 0:
-        policy_path = 'epi_10000'
+        policy_path = 'epi_43000'
         # policy = MLPPolicy(obs_size, act_size)
         policy = CNNPolicy(frames=LASER_HIST, action_space=2)
         policy.cuda()
@@ -216,7 +216,7 @@ if __name__ == '__main__':
         if not os.path.exists(policy_path):
             os.makedirs(policy_path)
 
-        file = policy_path + '/epi_1000.pth'
+        file = policy_path + '/epi_43000.pth'
         if os.path.exists(file):
             logger.info('####################################')
             logger.info('############Loading Model###########')

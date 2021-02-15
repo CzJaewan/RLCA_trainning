@@ -326,26 +326,26 @@ class StageWorld():
         self.cmd_pose.publish(pose_cmd)
 
     def generate_random_pose(self):
-        x = round(np.random.uniform(-9, 9), 3)
-        y = round(np.random.uniform(-9, 9), 3)
+        x = round(np.random.uniform(-8, 8), 3)
+        y = round(np.random.uniform(-8, 8), 3)
 
         dis = np.sqrt(x ** 2 + y ** 2)
         while (dis > 9) and not rospy.is_shutdown():
-            x = round(np.random.uniform(-9, 9), 3)
-            y = round(np.random.uniform(-9, 9), 3)
+            x = round(np.random.uniform(-8, 8), 3)
+            y = round(np.random.uniform(-8, 8), 3)
             dis = np.sqrt(x ** 2 + y ** 2)
         theta = round(np.random.uniform(0, 2 * np.pi),5)
         return [x, y, theta]
 
     def generate_random_goal(self):
         self.init_pose = self.get_self_stateGT()
-        x = round(np.random.uniform(-9, 9),3)
-        y = round(np.random.uniform(-9, 9),3)
+        x = round(np.random.uniform(-8, 8),3)
+        y = round(np.random.uniform(-8, 8),3)
         dis_origin = np.sqrt(x ** 2 + y ** 2)
         dis_goal = np.sqrt((x - self.init_pose[0]) ** 2 + (y - self.init_pose[1]) ** 2)
         while (dis_origin > 9 or dis_goal > 6 or dis_goal < 4) and not rospy.is_shutdown():
-            x = round(np.random.uniform(-9, 9),3)
-            y = round(np.random.uniform(-9, 9),3)
+            x = round(np.random.uniform(-8, 8),3)
+            y = round(np.random.uniform(-8, 8),3)
             dis_origin = np.sqrt(x ** 2 + y ** 2)
             dis_goal = np.sqrt((x - self.init_pose[0]) ** 2 + (y - self.init_pose[1]) ** 2)
             

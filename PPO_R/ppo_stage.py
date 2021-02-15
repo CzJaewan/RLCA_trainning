@@ -32,7 +32,12 @@ NUM_ENV = 4
 OBS_SIZE = 512
 ACT_SIZE = 2
 LEARNING_RATE = 5e-5
-RADIUS = 0.2
+RADIUS = 0.3
+
+env_index = 0
+
+def env_change(self):
+    self.env_index = random.randint(0,5)
 
 def run(comm, env, policy, policy_path, action_bound, optimizer):
 
@@ -48,11 +53,11 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
     for id in range(MAX_EPISODES):
         
         #reset
-        env.reset_pose()
+        env.reset_pose(env_index)
 
         if env.is_crashed:
             env.reset_pose()
-            env.is_crashed = False
+            env.is_crashed = Fnalse
         
         env.generate_goal_point()
         terminal = False
@@ -67,7 +72,6 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
         radius = np.asarray(env.robot_radius)
         state = [obs_stack, goal, speed, radius]
 
-        
         while not terminal and not rospy.is_shutdown():
         
             state_list = comm.gather(state, root=0)
@@ -85,7 +89,6 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
             ## run action
             env.control_vel(real_action)
             #-------------------------------------------------------------------------
-
             # rate.sleep()
             rospy.sleep(0.01)
 
@@ -99,7 +102,6 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
             #-------------------------------------------------------------------------
             # get next state
             #-------------------------------------------------------------------------
-
             s_next = env.get_laser_observation()
             left = obs_stack.popleft()
 
@@ -122,14 +124,15 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
                 last_v, _, _, _ = generate_action(env=env, state_list=state_next_list, policy=policy,
                                                                action_bound=action_bound)
             
-
             ## training
             #-------------------------------------------------------------------------
             if env.index == 0:
                 buff.append((state_list, a, r_list, terminal_list, logprob, v))
+
                 if len(buff) > HORIZON - 1:
                     s_batch, goal_batch, speed_batch, radius_batch, a_batch, r_batch, d_batch, l_batch, v_batch = \
                         transform_buffer(buff=buff)
+
                     t_batch, advs_batch = generate_train_data(rewards=r_batch, gamma=GAMMA, values=v_batch,
                                                               last_value=last_v, dones=d_batch, lam=LAMDA)
                     memory = (s_batch, goal_batch, speed_batch, radius_batch, a_batch, l_batch, t_batch, v_batch, r_batch, advs_batch)
@@ -138,12 +141,13 @@ def run(comm, env, policy, policy_path, action_bound, optimizer):
                                             num_env=NUM_ENV, frames=LASER_HIST,
                                             obs_size=OBS_SIZE, act_size=ACT_SIZE)
 
+                    #env.env_change()
+
                     buff = []
                     global_update += 1
 
             step += 1
             state = state_next
-
 
         if env.index == 0:
             #if global_update != 0 and global_update % 20 == 0:
